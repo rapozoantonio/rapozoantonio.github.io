@@ -1,2 +1,0 @@
-# rapozoantonio.github.io
-mypage
