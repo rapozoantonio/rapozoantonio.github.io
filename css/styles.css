@@ -1,0 +1,19 @@
+/* TAG SELECTORS */
+    body{
+        background-color: ghostwhite;
+    }
+
+	strong{
+		color: midnightblue;
+	}
+
+/* CLASS SELECTORS .clas */
+
+
+.contact
+
+{
+	color:midnightblue;
+}
+
+/* ID SELECTORS #ID */
