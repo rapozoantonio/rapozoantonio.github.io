@@ -1,19 +1,131 @@
 /* TAG SELECTORS */
     body{
-        background-color: ghostwhite;
+        background-color: #e3e3e3; /* ghostwhite also */
+        font-family:  Roboto, Helvetica, Arial, sans-serif;
     }
 
 	strong{
 		color: midnightblue;
 	}
+	a{
+		text-decoration: none;
+	}
+	a:hover {
+		background-color: yellow;
+	}
+
+
 
 /* CLASS SELECTORS .clas */
 
-
-.contact
-
-{
+.contact{
 	color:midnightblue;
+}
+
+.top-container{
+	text-align: center;
+	background-color: #e3e3e3;
+}
+.middle-container{
+	text-align: center;
+	font-size: 2rem;
+
+}
+.bottom-container{
+	padding: 30px;
+	text-align: center;
+	font-size: 2rem;
+	
+}
+.pro{
+	text-decoration: underline;
+}
+.greetings{
+	font-size: 3rem;
+}
+.subtitle{
+	font-size: 2.5rem;
+}
+
+.skill-row{
+	width: 50%;
+	margin: auto;
+	margin-top:100px;
+	margin-bottom: 100px;
+	text-align: left;
+	line-height: 2;
+	height: 400px
+}
+
+.skill-row-img-coding{
+	width:30%;
+    margin-right:30px;
+    float:left;
+}
+.skill-row-img-diagram{
+	width:25%;
+    margin-right:30px;
+    float:right;
+}
+
+.profile-picture{
+	height:200px;
+	width:200px;
+	border-radius:50%;
+	margin: auto;
+
+}
+
+.profile-description{
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.contact-me{
+	text-align: center;
+	line-height: 2;
+}
+
+.btn {
+	background-color:midnightblue;
+	-webkit-border-top-left-radius:15px;
+	-moz-border-radius-topleft:15px;
+	border-top-left-radius:15px;
+	-webkit-border-top-right-radius:15px;
+	-moz-border-radius-topright:15px;
+	border-top-right-radius:15px;
+	-webkit-border-bottom-right-radius:15px;
+	-moz-border-radius-bottomright:15px;
+	border-bottom-right-radius:15px;
+	-webkit-border-bottom-left-radius:15px;
+	-moz-border-radius-bottomleft:15px;
+	border-bottom-left-radius:15px;
+text-indent:0;
+	border:1px solid darkturquoise;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Roboto, Helvetica, Arial, sans-serif
+	font-size:1rem;
+	font-weight:bold;
+	font-style:normal;
+height:50px;
+	line-height:50px;
+width:140px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:0px 0px 23px darkturquoise;
+}.btn:hover {
+	background-color:darkturquoise;
+}.btn:active {
+	position:relative;
+	top:1px;}
+
+.logos{
+	width: 2%;
+}
+.logos:hover{
+	background-color: transparent;
 }
 
 /* ID SELECTORS #ID */
