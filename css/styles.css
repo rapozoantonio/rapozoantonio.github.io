@@ -14,9 +14,24 @@
 		background-color: yellow;
 	}
 
-
+	li{
+		margin: 10px 0;
+	}
 
 /* CLASS SELECTORS .clas */
+
+.dateTime {
+	color: #00000099;
+}
+
+.jobTitle {
+	font-size: 1.3rem;
+}
+
+.eduTitle {
+	font-size: 1.25rem;
+}
+
 
 .contact{
 	color:midnightblue;
