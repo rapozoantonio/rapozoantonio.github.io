@@ -12,6 +12,8 @@
     <link rel="icon" href="img/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 
 <body>
@@ -22,151 +24,162 @@
                     <tr>
                         <!-- My profile picture-->
                         <td>
-                            <img height="144" width="144" style="border-radius:50%" src="https://avatars3.githubusercontent.com/u/28830436?s=460&u=28d1d0506d6b781dea63b0872dca89f9402dfaf6&v=4" alt="profile_picture">
+                            <img class="img-profile" src="https://avatars3.githubusercontent.com/u/28830436?s=460&u=28d1d0506d6b781dea63b0872dca89f9402dfaf6&v=4" alt="profile_picture">
                         </td>
-                        <td>
+                        <td style="padding:1%">
                             <!-- My name-->
-                            <h1>Antonio Candido Rodrigues Rapozo</h1>
+                            <h1 class="section-title">Antonio Candido Rodrigues Rapozo</h1>
                             <!-- E-mail & number --> <strong> &#128231 <a class="contact" href="mailto:rapozoantonio@gmail.com">rapozoantonio@gmail.com</a> <br> &#9742 <a class="contact" href="tel:+55-21-984-080-735">+55 21 984 080 735</a></strong>
                         </td>
                     </tr>
                 </table>
-                <hr size="2" color=black>
-                <h2>PROFILE</h2>
-                <hr size="2" color=black>
-                <!--  What I believe to be true about my work --> <strong><em><br>Capability of pursue a strategic plan to achieve a final purpose and experience in leadership are strengths   described in my profile.</em></strong>
+                </br>
+                <h2 class="section-title">ABOUT</h2>
+                <!--  What I believe to be true about my work -->
+                <p>I'm passionate about technology and building elegant solutions. As an engineer I will help my team with a solution-driven mindset using scientific methodology, data and programming skills.</p>
             </section>
             <section id="#Experience">
-                <h2>EXPERIENCE</h2>
-                <hr size="2" color=black>
-
+                <h2 class="section-title">EXPERIENCE</h2>
+                <div class="row">
+                    <div class="col-1">
+                        <td>
+                            <img class="img-logos" src="https://media-exp1.licdn.com/dms/image/C4D0BAQEfBpRula1Q7Q/company-logo_200_200/0/1519950964580?e=1618444800&v=beta&t=1HVDbg9JT79S7NjfVlXKQKgOqTw9FMYc3eG2Ek4g1-k" alt="supplymarineLogo">
+                        </td>
+                    </div>
+                    <div class="col-11 "> <strong class="title">Business Intelligence Consultant</strong><span class="dateTime"> &middot Oct 20 - present &middot 3mos</span>
+                        <p>Supply Marine<span class="dateTime"> &middot RJ, Brazil</span></p>
+                        <p>Currently developing a data pipeline, connecting all data sources from operation (on-field engineering) to management in order to cut lead times, eliminate information loss and waste. By increasing data liability we expect to improve decision making both during operation and in business strategy as a whole.</p>
+                    </div>
+                    <div class="col-1">
+                        <td>
+                            <img class="img-logos" src="https://media-exp1.licdn.com/dms/image/C4D0BAQEDoL-CO8j8vw/company-logo_200_200/0/1602855602371?e=1618444800&v=beta&t=jZcV5TAEKn-POW02pG8Fjj2eBKzqPtorApNNoXyKlsk" alt="wemakeideasLogo">
+                        </td>
+                    </div>
+                    <div class="col-11"> <strong class="title">Technology Developer</strong><span class="dateTime"> &middot Oct 19 - Oct 20 &middot 1yr</span>
+                        <p>We Make • Ideas<span class="dateTime"> &middot RJ, Brazil</span></p>
+                        <p>Evaluated data from 10,000+ clients. Used this data to implement new strategies and started a system to identify and reward favorable client behavior. Initiated a data-driven department overseen crew of 14 members which helped the team to highlight the most profitable company products and how to improve them.</p>
+                    </div>
+                    <div class="col-1">
+                        <td>
+                            <img class="img-logos" src="https://media-exp1.licdn.com/dms/image/C510BAQEaf7vwySln4A/company-logo_100_100/0/1519891146552?e=1618444800&v=beta&t=QhwWwrFQNf-cnnrP7K0mAHUyME6Y0HBEVZ2DsGthSUc" alt="technipfmcLogo">
+                        </td>
+                    </div>
+                    <div class="col-11">
+                        <!-- Position  / Period--> <strong class="title">Structural Engineer Jr.</strong><span class="dateTime"> &middot Dec 17 - Sep 20 &middot 2yrs 10mos</span>
+                        <!-- Location -->
+                        <p>TechnipFMC<span class="dateTime"> &middot RJ, Brazil</span></p>
+                        <!-- Brief description-->
+                        <p>Delivered up to 50+ equipment designs through FEA to major Oil and Gas producing companies. Reduced design development need by circa 30%, helping the team create a portfolio system based on historical data with 200+ equipment. Collaborated in the standardization of equipment to increase delivery speed and gain bargaining power with suppliers.</p>
+                    </div>
+                    <div class="col-1">
+                        <td>
+                            <img class="img-logos" src="https://media-exp1.licdn.com/dms/image/C4E0BAQF1M2TjOk5Q_w/company-logo_100_100/0/1519863082420?e=1618444800&v=beta&t=a3gxxLpvLueYRq1IQkPVEAR50PXae2iSuQ-xOq3MRMQ" alt="cnpqLogo">
+                        </td>
+                    </div>
+                    <div class="col-11"> <strong class="title">Numerical Analyst Developer</strong><span class="dateTime"> &middot Sep 16 - Sep 18 &middot 2yrs 1mo</span>
+                        <p>Institutional Scholarship Program PIBIC CNPq<span class="dateTime"> &middot RJ, Brazil</span></p>
+                        <p>Contributed to academy with two reports and the publication of<span><a href="http://www.sistema.abcm.org.br/articleFiles/download/10679" target="_blank"> an article to the 24th ABCM International Congress of Mechanical Engineering.</a></span>
+                        </p>
+                    </div>
+                    <div class="col-1">
+                        <td>
+                            <img class="img-logos" src="https://media-exp1.licdn.com/dms/image/C560BAQFl4z9E7khVag/company-logo_100_100/0/1519856402119?e=1618444800&v=beta&t=qKchLexiKYSrWOXdr8Z6a7IRJ0Hshp1NuXETCPsdZ7Y" alt="zfLogo">
+                        </td>
+                    </div>
+                    <div class="col-11"> <strong class="title">Intern - Developer of Manufacturing Processes</strong><span class="dateTime"> &middot Feb 16 - Jun 16 &middot 5mos</span>
+                        <p>ZF Friedrichshafen AG<span class="dateTime"> &middot Passau, Germany</span></p>
+                        <p>Managed with other team members to redesign factory layout and track OEE to increase efficiency and cut delivery time to materials replenished in the working cells.</p>
+                    </div>
+            </section>
+            <section id="#Education">
+                <h2 class="section-title">EDUCATION</h2>
                 <ul>
-                    <li><b>Supply Marine</b></li>
-                    <ul>
-                        <li><strong class="jobTitle">BI Consultant</strong><span class="dateTime"> &middot 10/20 - present &middot RJ, Brazil</span></li>
-                    </ul>
-                    <p>Responsible for improving the way data will be retrieved from field and also to perfom analyses and reports of past historical data by preprocessing data sets with Python and presenting it with Power BI, along with other useful tools to improve internal processes and add value to clients.</p>
-
-                    <li><b>We Make • Ideas </b></li>
-                    <ul>
-                        <li><strong class="jobTitle">Technology Developer</strong><span class="dateTime"> &middot 10/19 - 10/20 &middot RJ, Brazil</span></li>
-                    </ul>
-                    <p>Marketing analysis with Python 3 applications, through the development of data-oriented metrics to better deliver event related products along with the digitalization of key components to clients by creating SEO-oriented pages for projects using Html5, CSS3 and Javascript.</p>
-                   
-
-                    <!-- Location --><li><b>TechnipFMC</b></li>
-                    <!-- Position  / Period-->
-                    <ul>
-                        <li><strong class="jobTitle">Structural Engineer Jr.</strong><span class="dateTime"> &middot 10/19 - 10/20 &middot RJ, Brazil</span></li>
-                        <li><strong>Engineer assistant</strong><span class="dateTime"> &middot11/18 - 10/19 &middot RJ, Brazil</span></li>
-                        <li><strong>Intern</strong><span class="dateTime"> &middot 12/17 - 11/18 &middot RJ, Brazil</span></li>
-                    </ul>
-                    <!-- Brief description-->
-                    <p>Automation and parametrization of multiple analysis to determine the response of a system when it is subjected to an excitation or loading through finite elements analysis by means of programming logic.</p>
-
-
-                    <li><b>Institutional Scholarship Program PIBIC CNPq</b>
+                    <li><a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank"><strong class="title">Web Development Bootcamp</strong></a><span class="dateTime"> &middot Udemy by Angela Yu | 20.1</span>
                     </li>
-                    <ul>
-                        <li><strong class="jobTitle">Numerical Analyst Developer</strong><span class="dateTime"> &middot 09/16 - 09/18 &middot RJ, Brazil</span></li>
-                    </ul>
-                    <p>Numerical modeling and simulation of the behaviour of Honeycomb type vibration absorbers made from shape memory alloy using APDL (ANSYS).</p>
-
-                    <li><b>ZF Friedrichshafen AG</b></li>
-                    <ul>
-                        <li><strong class="jobTitle">Intern - Developer of Manufacturing Processes</strong><span class="dateTime"> &middot 02/16 - 06/16 &middot Passau, Germany</span></li>
-                    </ul>
-                    <p>Evaluation of work done on the factory floor and office, focused on developing automation of repetitive tasks of manage control with Microsoft Office and VBA code.</p>
+                    <li><a href="https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp" target="_blank"><strong class="title">Data Science Bootcamp</strong></a><span class="dateTime"> &middot Udemy by 365 Careers | 20.1</span>
+                    </li>
+                    <li><a href="https://www.esss.co/en/institute/online-courses/" target="_blank"><strong class="title">ESSS - Engineering Simulation and Scientific Software</strong></a><span class="dateTime"> &middot  Multiple Courses (ANSYS) | 19.2 &middot RJ, Brazil</span>
+                    </li>
+                    <li><a href="http://www.cefet-rj.br/" target="_blank"><strong class="title">Federal Center of Technological Education Celso Suckow da Fonseca</strong></a><span class="dateTime"> &middot Bachelor Degree in Mechanical Engineering | 19.2 &middot RJ, Brazil</span>
+                    </li>
+                    <li><a href="https://openeducation.blackboard.com/site/calpolypomona" target="_blank"><strong class="title">California State Polytechnic University</strong></a><span class="dateTime"> &middot VBA Online Course | 17.1 &middot Pomona, CA, USA</span>
+                    </li>
+                    <li><a href="https://www.th-deg.de/" target="_blank"><strong class="title">Technische Hochschule Deggendorf</strong></a><span class="dateTime"> &middot  Bachelor Degree in Mechanical Engineering | 15.1 - 16.1 &middot Deggendorf, Germany</span>
+                    </li>
+                    <li><a href="https://www.iik-duesseldorf.de/" target="_blank"><strong class="title">Institut für Internationale Kommunikation</strong></a><span class="dateTime"> &middot German Course | 14.2 &middot Düsseldorf, Germany</span>
+                    </li>
+                    <li><a href="https://www.kaplaninternational.com/" target="_blank"><strong class="title">Kaplan International Center</strong></a><span class="dateTime"> &middot Exchange Program |  13.2 &middot Santa Barbara, CA, USA</span>
+                    </li>
+                    <li><a href="https://www.culturainglesa.net/" target="_blank"><strong class="title">Cultura Inglesa</strong></a><span class="dateTime"> &middot English Course | 12.2 &middot RJ, Brazil</span>
+                    </li>
                 </ul>
             </section>
-            <section id="#Education"></section>
-            <h2>EDUCATION</h2>
-            <hr size="2" color=black>
-            <ul>
-                <li><a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank"><strong class="eduTitle">Web Development Bootcamp (Html5, CSS & Javascript)</strong></a><em class="dateTime"> &middot Udemy by Angela Yu | 20.1</em></li>
-
-                <li><a href="https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp" target="_blank"><strong class="eduTitle">Data Science Bootcamp (Python 3)</strong></a><em class="dateTime"> &middot Udemy by 365 Careers | 20.1</em></li>
-
-                <li><a href="https://www.esss.co/en/institute/online-courses/" target="_blank"><strong class="eduTitle">Multiple Courses (ANSYS)</strong></a><em class="dateTime"> &middot Engineering Simulation and Scientific Software (ESSS) | 19.2 &middot RJ, Brazil</em></li>
-
-                <li><a href="http://www.cefet-rj.br/" target="_blank"><strong class="eduTitle">Bachelor Degree in Mechanical Engineering</strong></a><em class="dateTime"> &middot Federal Center of Technological Education Celso Suckow da Fonseca | 19.2 &middot RJ, Brazil</em></li>
-
-                <li><a href="https://openeducation.blackboard.com/site/calpolypomona" target="_blank"><strong class="eduTitle">VBA Online Course</strong></a><em class="dateTime"> &middot California State Polytechnic University | 17.1 &middot Pomona, CA, USA</em></li>
-
-                <li><a href="https://www.th-deg.de/" target="_blank"><strong class="eduTitle">Bachelor Degree in Mechanical Engineering</strong></a><em class="dateTime"> &middot Technische Hochschule Deggendorf | 15.1 - 16.1 &middot Deggendorf, Germany</em></li>
-
-                <li><a href="https://www.iik-duesseldorf.de/" target="_blank"><strong class="eduTitle">German Course</strong></a><em class="dateTime"> &middot  Institut für Internationale Kommunikation | 14.2 &middot Düsseldorf, Germany</em></li>
-
-                <li><a href="https://www.kaplaninternational.com/" target="_blank"><strong class="eduTitle">Exchange Program</strong></a><em class="dateTime"> &middot Kaplan International Center |  13.2 &middot Santa Barbara, CA, USA</em></li>
-
-                <li><a href="https://www.culturainglesa.net/" target="_blank"><strong class="eduTitle">English Course</strong></a><em class="dateTime"> &middot  Cultura Inglesa | 12.2 &middot RJ, Brazil</em></li>
-            </ul>
+            <section id="#Skills">
+                <h2 class="section-title">SKILLS</h2>
+                <!-- additional skills/tools I use & expertise level-->
+                <table>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li><span><a href="https://www.microsoft.com/en-us/microsoft-365/products-apps-services" target="_blank"><strong class="title">Microsoft Office 365 & VBA</strong></a></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-o"></span>
+                                </li>
+                                <li><span><strong class="title">Data Science (Python 3: NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn, Tensorflow)</strong></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-o"></span>
+                                </li>
+                                <li><span><a href="https://www.ansys.com/" target="_blank"><strong class="title">ANSYS</strong></a></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-o"></span>
+                                </li>
+                                <li><span><strong class="title">Web Development (React: HTML5, CSS3; JavaScript: JQuery, Node, Express, EJS, Mongoose)</strong></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-o"></span>
+                                    <span class="fa fa-star-o"></span>
+                                </li>
+                                <li><span><a href="https://www.autodesk.com/" target="_blank"><strong class="title">AutoCAD</strong></a></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-o"></span>
+                                    <span class="fa fa-star-o"></span>
+                                    <span class="fa fa-star-o"></span>
+                                </li>
+                                <li><span><a href="https://www.solidworks.com/" target="_blank"><strong class="title">SolidWorks</strong></a></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-o"></span>
+                                    <span class="fa fa-star-o"></span>
+                                    <span class="fa fa-star-o"></span>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
             </section>
-            <section id="#AdditionalInfo"></section>
-            <h2>ADDITIONAL INFORMATION</h2>
-            <hr size="2" color=black>
-            <!-- additional skills/tools I use & expertise level-->
-            <table>
-                <tr>
-                    <td>
-                        <ul>
-                            <li><span><a href="https://www.microsoft.com/en-us/microsoft-365/products-apps-services" target="_blank"><strong>Microsoft Office Package & VBA</strong></a></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                            </li>
-                            <li><span><a href="https://www.ansys.com/" target="_blank"><strong>ANSYS</strong></a></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                            </li>
-                            <li><span><a href="https://www.autodesk.com/" target="_blank"><strong>AutoCAD</strong></a></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                                <span class="fa fa-star-o"></span>
-                            </li>                            
-                            <li><span><a href="https://www.solidworks.com/" target="_blank"><strong>SolidWorks</strong></a></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                                <span class="fa fa-star-o"></span>
-                            </li>
-                            <li><span><strong>Data Science (Python 3: NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn, Tensorflow)</strong></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                            </li>
-                            <li><span><strong>Web Development (React: HTML5, CSS3; JavaScript: JQuery, Node, Express, EJS, Mongoose)</strong></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-o"></span>
-                            </li>
-                            <li><span><a href="https://en.wikipedia.org/wiki/List_of_territorial_entities_where_Portuguese_is_an_official_language" target="_blank"><strong>Portuguese</strong></a></span>
-                                <span class="dateTime"> &middot First language</span>
-                            </li>
-
-                            <li><span><a href="https://en.wikipedia.org/wiki/English-speaking_world" target="_blank"><strong>English</strong></a></span>
-                                <span class="dateTime"> &middot Fluent</span>
-                            </li>
-
-                            <li><span><a href="https://en.wikipedia.org/wiki/List_of_territorial_entities_where_German_is_an_official_language" target="_blank"><strong>German</strong></a></span>
-                                <span class="dateTime"> &middot Advanced</span>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
+            <section id="#Languages">
+                <h2 class="section-title">LANGUAGES</h2>
+                <!-- additional skills/tools I use & expertise level-->
+                <div class="row">
+                    <div class="col-1"><span class="n_language">3</span>
+                    </div>
+                    <div class="col-11"> <span><a href="https://en.wikipedia.org/wiki/List_of_territorial_entities_where_Portuguese_is_an_official_language" target="_blank"><strong>Portuguese</strong></a></span>
+                        <span class="dateTime"> &middot </span>
+                        <span><a href="https://en.wikipedia.org/wiki/English-speaking_world" target="_blank"><strong>English</strong></a></span>
+                        <span class="dateTime"> &middot </span>
+                        <span><a href="https://en.wikipedia.org/wiki/List_of_territorial_entities_where_German_is_an_official_language" target="_blank"><strong>German</strong></a></span>
+                    </div>
             </section>
         </article>
     </main>
