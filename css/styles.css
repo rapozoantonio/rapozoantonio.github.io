@@ -1,7 +1,19 @@
 /* TAG SELECTORS */
+	* {
+	margin:0;
+	padding:0;
+	}
     body{
         background-color: #e3e3e3; /* ghostwhite also */
         font-family:  Roboto, Helvetica, Arial, sans-serif;
+        padding: 0.3%
+
+    }
+
+
+    p{
+    	text-align:justify;
+    	font-size: 0.95rem;
     }
 
 	strong{
@@ -18,20 +30,25 @@
 		margin: 10px 0;
 	}
 
+	section{
+		border: 0.5px solid #00000099;
+		border-radius: 5px;
+		margin-bottom: 1px;
+		padding: 0.5%
+	}
+	hr{
+		margin: 10px 0px;
+	}
 /* CLASS SELECTORS .clas */
 
 .dateTime {
 	color: #00000099;
+	font-size: 0.95rem;
 }
 
-.jobTitle {
-	font-size: 1.3rem;
+.title {
+	font-size: 1rem;
 }
-
-.eduTitle {
-	font-size: 1.25rem;
-}
-
 
 .contact{
 	color:midnightblue;
@@ -50,7 +67,14 @@
 	padding: 30px;
 	text-align: center;
 	font-size: 2rem;
-	
+}
+.img-logos{
+	margin: auto;
+	display: block;
+	height:50px;
+	width:50px;
+	border-radius: 50%
+}
 }
 .pro{
 	text-decoration: underline;
@@ -83,9 +107,9 @@
     float:right;
 }
 
-.profile-picture{
-	height:200px;
-	width:200px;
+.img-profile{
+	height:112px;
+	width:112px;
 	border-radius:50%;
 	margin: auto;
 
@@ -143,4 +167,16 @@ width:140px;
 	background-color: transparent;
 }
 
+.n_language{
+	font-size:2.5rem;
+	text-align: center;
+	font-weight: 700;
+	margin: auto;
+	display: block;
+}
+
+.section-title{
+	font-size: 1.4rem;
+}
 /* ID SELECTORS #ID */
+
