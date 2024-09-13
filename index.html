@@ -1,175 +1,439 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="author" content="Antonio Candido Rodrigues Rapozo">
-    <meta name="description" content="My personal Curriculum Vitae in html">
-    <meta name="keywords" content="Antonio Candido Rodrigues Rapozo, Html5, Curriculum">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae | Antonio Candido Rapozo</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="img/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Antonio Candido Rodrigues Rapozo" />
+    <meta
+      name="description"
+      content="Experienced Software Engineer specializing in full-stack development with expertise in Vue.js, React.js, C#, .NET, and machine learning."
+    />
+    <meta
+      name="keywords"
+      content="Antonio Rapozo, Software Engineer, Full Stack Developer, Vue.js, React.js, C#, .NET, Machine Learning, SQL Server, AWS"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antonio Rapozo | Software Engineer</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Antonio Rapozo | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Experienced Software Engineer specializing in full-stack development with expertise in Vue.js, React.js, C#, .NET, and machine learning."
+    />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/28830436?v=4" />
+    <meta property="og:url" content="https://www.yourwebsite.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Antonio Candido Rodrigues Rapozo",
+        "jobTitle": "Software Engineer",
+        "url": "https://www.yourwebsite.com",
+        "image": "https://avatars.githubusercontent.com/u/28830436?v=4",
+        "email": "mailto:rapozoantonio@gmail.com",
+        "telephone": "+55-21-984-080-735",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Pittsburgh",
+          "addressRegion": "PA",
+          "addressCountry": "USA"
+        },
+        "sameAs": ["https://github.com/rapozoantonio", "https://www.linkedin.com/in/rapozoantonio/"]
+      }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/11b85ec5c0.js" crossorigin="anonymous"></script>
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-..."
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Antonio Rapozo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#profile">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#languages">Languages</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<body>
-    <main>
-        <article>
-            <section id="#Profile">
-                <table cellspacing="20">
-                    <tr>
-                        <!-- My profile picture-->
-                        <td>
-                            <img class="img-profile" src="https://avatars3.githubusercontent.com/u/28830436?s=460&u=28d1d0506d6b781dea63b0872dca89f9402dfaf6&v=4" alt="profile_picture">
-                        </td>
-                        <td style="padding:1%">
-                            <!-- My name-->
-                            <h1 class="section-title">Antonio Candido Rodrigues Rapozo</h1>
-                            <!-- E-mail & number --> <strong> <i class="fas fa-envelope fa-sm"></i> <a class="contact" href="mailto:rapozoantonio@gmail.com" target="_blank">rapozoantonio@gmail.com</a> 
-                                <br> <i class="fas fa-phone fa-sm"></i> <a class="contact" href="tel:+55-21-984-080-735" target="_blank">+55 21 984 080 735</a><br> <i class="fab fa-github fa-sm"></i><a class="contact" href="https://github.com/rapozoantonio" target="_blank"> https://github.com/rapozoantonio</a></strong>
-                        </td>
-                    </tr>
-                </table>
-                </br>
-                <h2 class="section-title">ABOUT</h2>
-                <!--  What I believe to be true about my work -->
-                <p>I'm passionate about technology and building elegant solutions. As an engineer I will help my team with a solution-driven mindset using scientific methodology, data and programming skills.</p>
-            </section>
-            <section id="#Experience">
-                <h2 class="section-title">EXPERIENCE</h2>
-                <div class="row">
-                    <div class="col-1">
-                        <td>
-                            <img class="img-logos" src="https://media-exp1.licdn.com/dms/image/C4D0BAQEfBpRula1Q7Q/company-logo_200_200/0/1519950964580?e=1618444800&v=beta&t=1HVDbg9JT79S7NjfVlXKQKgOqTw9FMYc3eG2Ek4g1-k" alt="supplymarineLogo">
-                        </td>
-                    </div>
-                    <div class="col-11 "> <strong class="title">Data Engineer</strong>  <span class="dateTime"> <i class="far fa-calendar-alt fa-xs"></i> Oct 20 - present</span>
-                        <p>Supply Marine<span class="dateTime"> <i class="fas fa-map-marker-alt fa-xs"></i> RJ, Brazil</span>
-                        </p>
-                        <p>Currently developing a data pipeline, connecting all data sources from HVAC-R installation and repair services (offshore engineering) to management in order to cut lead times, eliminate information loss and waste. By increasing data liability we expect to improve decision making both during operation and in business strategy as a whole.</p>
-                    </div>
-                    <div class="col-1">
-                        <td>
-                            <img class="img-logos" src="https://media-exp1.licdn.com/dms/image/C510BAQEaf7vwySln4A/company-logo_100_100/0/1519891146552?e=1618444800&v=beta&t=QhwWwrFQNf-cnnrP7K0mAHUyME6Y0HBEVZ2DsGthSUc" alt="technipfmcLogo">
-                        </td>
-                    </div>
-                    <div class="col-11">
-                        <!-- Position  / Period--> <strong class="title">Simulation Engineer </strong>  <span class="dateTime"> <i class="far fa-calendar-alt fa-xs"></i> Dec 17 - Sep 20 &middot 2yrs 10mos</span>
-                        <!-- Location -->
-                        <p>TechnipFMC<span class="dateTime"> <i class="fas fa-map-marker-alt fa-xs"></i> RJ, Brazil</span>
-                        </p>
-                        <!-- Brief description-->
-                        <p>Delivered up to 50+ equipment designs through FEA to major Oil and Gas producing companies. Reduced design development need by circa 30%, helping the team create a portfolio system based on historical data with 200+ equipment. Collaborated in the standardization of equipment to increase delivery speed and gain bargaining power with suppliers.</p>
-                    </div>
-                    <div class="col-1">
-                        <td>
-                            <img class="img-logos" src="https://media-exp1.licdn.com/dms/image/C4E0BAQF1M2TjOk5Q_w/company-logo_100_100/0/1519863082420?e=1618444800&v=beta&t=a3gxxLpvLueYRq1IQkPVEAR50PXae2iSuQ-xOq3MRMQ" alt="cnpqLogo">
-                        </td>
-                    </div>
-                    <div class="col-11"> <strong class="title">Numerical Analyst Developer</strong>  <span class="dateTime"><i class="far fa-calendar-alt fa-xs"></i> Sep 16 - Sep 18 &middot 2yrs 1mo</span>
-                        <p>Institutional Scholarship Program PIBIC CNPq<span class="dateTime"> <i class="fas fa-map-marker-alt fa-xs"></i> RJ, Brazil</span>
-                        </p>
-                        <p>Contributed to academy with two reports and the publication of<span><a href="http://www.sistema.abcm.org.br/articleFiles/download/10679" target="_blank"> an article to the 24th ABCM International Congress of Mechanical Engineering.</a></span>
-                        </p>
-                    </div>
-                    <div class="col-1">
-                        <td>
-                            <img class="img-logos" src="https://media-exp1.licdn.com/dms/image/C560BAQFl4z9E7khVag/company-logo_100_100/0/1519856402119?e=1618444800&v=beta&t=qKchLexiKYSrWOXdr8Z6a7IRJ0Hshp1NuXETCPsdZ7Y" alt="zfLogo">
-                        </td>
-                    </div>
-                    <div class="col-11"> <strong class="title">Intern - Developer of Manufacturing Processes</strong><span class="dateTime"> <i class="far fa-calendar-alt fa-xs"></i> Feb 16 - Jun 16 &middot 5mos</span>
-                        <p>ZF Friedrichshafen AG<span class="dateTime"> <i class="fas fa-map-marker-alt fa-xs"></i> Passau, Germany</span>
-                        </p>
-                        <p>Managed with other team members to redesign factory layout and track OEE to increase efficiency and cut delivery time to materials replenished in the working cells.</p>
-                    </div>
-            </section>
-            <section id="#Education">
-                <h2 class="section-title">EDUCATION</h2>
-                <ul>
-                    <li><a href="https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp" target="_blank"><strong class="title">Data Science Bootcamp</strong></a><span class="dateTime"> &middot Udemy by 365 Careers | 20.1</span>
-                    </li>
-                    <li><a href="https://www.esss.co/en/institute/online-courses/" target="_blank"><strong class="title">ESSS - Engineering Simulation and Scientific Software</strong></a><span class="dateTime"> &middot  Multiple Courses (ANSYS) | 19.2 &middot RJ, Brazil</span>
-                    </li>
-                    <li><a href="http://www.cefet-rj.br/" target="_blank"><strong class="title">Federal Center of Technological Education Celso Suckow da Fonseca</strong></a><span class="dateTime"> &middot Bachelor Degree in Mechanical Engineering | 19.2 &middot RJ, Brazil</span>
-                    </li>
-                    <li><a href="https://openeducation.blackboard.com/site/calpolypomona" target="_blank"><strong class="title">California State Polytechnic University</strong></a><span class="dateTime"> &middot VBA Online Course | 17.1 &middot Pomona, CA, USA</span>
-                    </li>
-                    <li><a href="https://www.th-deg.de/" target="_blank"><strong class="title">Technische Hochschule Deggendorf</strong></a><span class="dateTime"> &middot  Bachelor Degree in Mechanical Engineering | 15.1 - 16.1 &middot Deggendorf, Germany</span>
-                    </li>
-                    <li><a href="https://www.iik-duesseldorf.de/" target="_blank"><strong class="title">Institut für Internationale Kommunikation</strong></a><span class="dateTime"> &middot German Course | 14.2 &middot Düsseldorf, Germany</span>
-                    </li>
-                    <li><a href="https://www.kaplaninternational.com/" target="_blank"><strong class="title">Kaplan International Center</strong></a><span class="dateTime"> &middot Exchange Program |  13.2 &middot Santa Barbara, CA, USA</span>
-                    </li>
-                    <li><a href="https://www.culturainglesa.net/" target="_blank"><strong class="title">Cultura Inglesa</strong></a><span class="dateTime"> &middot English Course | 12.2 &middot RJ, Brazil</span>
-                    </li>
-                </ul>
-            </section>
-            <section id="#Skills">
-                <h2 class="section-title">SKILLS</h2>
-                <!-- additional skills/tools I use & expertise level-->
-                <table>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li><span><a href="https://www.microsoft.com/en-us/microsoft-365/products-apps-services" target="_blank"><strong class="title">Microsoft Office 365 & VBA</strong></a></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star-o"></span>
-                                </li>
-                                <li><span><strong class="title">Data Science (Python 3: NumPy, Pandas, Matplotlib, Scikit-Learn, Tensorflow)</strong></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star-o"></span>
-                                </li>
-                                <li><span><a href="https://www.ansys.com/" target="_blank"><strong class="title">ANSYS</strong></a></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star-o"></span>
-                                </li>
-                                <li><span><a href="https://www.autodesk.com/" target="_blank"><strong class="title">AutoCAD</strong></a></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    <span class="fa fa-star-o"></span>
-                                </li>
-                                <li><span><a href="https://www.solidworks.com/" target="_blank"><strong class="title">SolidWorks</strong></a></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    <span class="fa fa-star-o"></span>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-            </section>
-            <section id="#Languages">
-                <h2 class="section-title">LANGUAGES</h2>
-                <!-- additional skills/tools I use & expertise level-->
-                <div class="row">
-                    <div class="col-1"><span class="n_language">3</span>
-                    </div>
-                    <div class="col-11"> <span><a href="https://en.wikipedia.org/wiki/List_of_territorial_entities_where_Portuguese_is_an_official_language" target="_blank"><strong>Portuguese</strong></a></span>
-                        <span class="dateTime"> &middot First language</span>
-                        <br> <span><a href="https://en.wikipedia.org/wiki/English-speaking_world" target="_blank"><strong>English</strong></a></span><span class="dateTime"> &middot Fluent | Exchange program</span>
-                        <br> <span><a href="https://en.wikipedia.org/wiki/List_of_territorial_entities_where_German_is_an_official_language" target="_blank"><strong>German</strong></a></span><span class="dateTime"> &middot Advanced | Exchange program & telc B1 certification</span>
-                    </div>
-            </section>
+    <!-- Main Content -->
+    <main class="container my-4">
+      <!-- Profile Section -->
+      <section id="profile" class="mb-4">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-center">
+            <!-- Profile Picture -->
+            <img
+              class="img-fluid rounded-circle mb-3 shadow profile-img"
+              src="https://avatars.githubusercontent.com/u/28830436?v=4"
+              alt="Antonio Rapozo"
+            />
+          </div>
+          <div class="col-md-9">
+            <!-- Name and Title -->
+            <h1 class="display-6 fw-bold">Antonio Candido Rodrigues Rapozo</h1>
+            <p class="lead text-muted">Software Engineer @ Mayvue Solutions | Full Stack Developer</p>
+            <!-- Contact Information -->
+            <ul class="list-inline">
+              <li class="list-inline-item me-3">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:rapozoantonio@gmail.com">rapozoantonio@gmail.com</a>
+              </li>
+              <li class="list-inline-item me-3">
+                <i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+55-21-984-080-735">+55 21 984 080 735</a>
+              </li>
+              <li class="list-inline-item me-3">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <a href="https://github.com/rapozoantonio" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
+              <li class="list-inline-item">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                <a href="https://www.linkedin.com/in/rapozoantonio/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </li>
+            </ul>
+            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Pittsburgh, Pennsylvania, United States</p>
+          </div>
+        </div>
+        <!-- About Section -->
+        <div class="mt-4">
+          <h2>About</h2>
+          <p class="text-muted">
+            I am a full-stack software engineer delivering scalable and reliable products for transportation agencies. With
+            over three years of experience in back-end and front-end development—proficient in Vue.js, React.js, C#, .NET,
+            and databases like Oracle SQL Developer and SQL Server—I build comprehensive software solutions that meet complex
+            needs.
+          </p>
+          <p class="text-muted">
+            Passionate about innovation, I thrive on challenging projects that push technological boundaries. My interest in
+            artificial intelligence led me to integrate AI capabilities using the OpenAI API, enhancing functionality and
+            user experience.
+          </p>
+          <p class="text-muted">
+            Currently pursuing the AWS Solutions Architect certification, I am expanding my expertise in cloud technologies
+            to architect secure, scalable solutions on the AWS platform.
+          </p>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="mb-4">
+        <h2>Experience</h2>
+        <hr />
+        <!-- Mayvue Solutions -->
+        <article class="my-4">
+          <h3 class="fw-bold">Software Engineer <span class="text-muted">@ Mayvue Solutions</span></h3>
+          <p class="text-muted">
+            <i class="far fa-calendar-alt" aria-hidden="true"></i> March 2022 - Present &nbsp;|&nbsp;
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Pittsburgh, PA, USA
+          </p>
+          <ul>
+            <li>
+              Develop and maintain web applications using Vue.js, React.js, C#, and .NET, contributing to high-quality
+              software products.
+            </li>
+            <li>
+              Collaborate with cross-functional teams to define, design, and deploy new features, enhancing product
+              functionality and user experience.
+            </li>
+            <li>Implement best practices in software design and development, improving code quality and maintainability.</li>
+          </ul>
         </article>
-    </main>
-</body>
+        <hr />
+        <!-- Supply Marine Serviços -->
+        <article class="my-4">
+          <h3 class="fw-bold">
+            Data Engineer | Software Engineer | BI Consultant <span class="text-muted">@ Supply Marine Serviços</span>
+          </h3>
+          <p class="text-muted">
+            <i class="far fa-calendar-alt" aria-hidden="true"></i> October 2020 - December 2021 &nbsp;|&nbsp;
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Rio de Janeiro, Brazil
+          </p>
+          <ul>
+            <li>
+              Architected a data pipeline connecting all data sources from HVAC-R services to management systems,
+              streamlining data flow.
+            </li>
+            <li>Increased data reliability, enhancing decision-making during operations and strategic planning.</li>
+            <li>Developed business intelligence tools to enhance operational efficiency.</li>
+          </ul>
+        </article>
+        <hr />
+        <!-- TechnipFMC -->
+        <article class="my-4">
+          <h3 class="fw-bold">Simulation Engineer Jr. <span class="text-muted">@ TechnipFMC</span></h3>
+          <p class="text-muted">
+            <i class="far fa-calendar-alt" aria-hidden="true"></i> December 2017 - September 2020 &nbsp;|&nbsp;
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Rio de Janeiro, Brazil
+          </p>
+          <ul>
+            <li>
+              Delivered over 50 equipment designs evaluated through Finite Element Method (FEM) to major oil and gas
+              companies.
+            </li>
+            <li>
+              Reduced design development needs by 30% by creating a historical data portfolio system, boosting efficiency.
+            </li>
+            <li>Collaborated in standardizing equipment, increasing delivery speed and improving supplier negotiations.</li>
+          </ul>
+        </article>
+        <hr />
+        <!-- CNPq Researcher -->
+        <article class="my-4">
+          <h3 class="fw-bold">Researcher <span class="text-muted">@ CNPq</span></h3>
+          <p class="text-muted">
+            <i class="far fa-calendar-alt" aria-hidden="true"></i> September 2016 - September 2018 &nbsp;|&nbsp;
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Rio de Janeiro, Brazil
+          </p>
+          <ul>
+            <li>Contributed to academic research with two reports and a published article in mechanical engineering.</li>
+            <li>
+              Focused on computational methods and numerical analysis, specializing in finite element analysis of vibration
+              absorbers.
+            </li>
+            <li>Conducted finite element analysis, enhancing understanding of vibration absorber performance.</li>
+          </ul>
+        </article>
+        <hr />
+        <!-- ZF Friedrichshafen AG -->
+        <article class="my-4">
+          <h3 class="fw-bold">
+            Manufacturing Processes Developer Intern <span class="text-muted">@ ZF Friedrichshafen AG</span>
+          </h3>
+          <p class="text-muted">
+            <i class="far fa-calendar-alt" aria-hidden="true"></i> February 2016 - June 2016 &nbsp;|&nbsp;
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Passau, Germany
+          </p>
+          <ul>
+            <li>Redesigned factory layouts, increasing efficiency and reducing material delivery times.</li>
+            <li>Created dashboards to monitor Overall Equipment Effectiveness (OEE), improving operational insights.</li>
+            <li>Collaborated with cross-functional international teams, contributing to successful project outcomes.</li>
+          </ul>
+        </article>
+      </section>
 
+      <!-- Skills Section -->
+      <section id="skills" class="mb-4">
+        <h2>Skills</h2>
+        <hr />
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="fw-bold">Core Technical Expertise</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Full-Stack Development</strong>: Vue.js, React.js, C#, .NET</li>
+              <li class="list-group-item">
+                <strong>Cloud Computing</strong>: AWS (pursuing Solutions Architect certification), Azure
+              </li>
+              <li class="list-group-item"><strong>Database Management</strong>: SQL Server, Oracle SQL Developer</li>
+              <li class="list-group-item"><strong>Artificial Intelligence Integration</strong>: OpenAI API, LangChain</li>
+              <li class="list-group-item">
+                <strong>Data Engineering</strong>: Data Pipelines, ETL Processes, Data Warehousing
+              </li>
+            </ul>
+            <h5 class="fw-bold mt-4">Programming Languages</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">C#</li>
+              <li class="list-group-item">JavaScript</li>
+              <li class="list-group-item">Python</li>
+              <li class="list-group-item">SQL</li>
+            </ul>
+            <h5 class="fw-bold mt-4">Web Development Frameworks</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Vue.js</li>
+              <li class="list-group-item">React.js</li>
+              <li class="list-group-item">.NET Core</li>
+              <li class="list-group-item">ASP.NET MVC</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5 class="fw-bold">DevOps & Cloud Technologies</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Azure DevOps</li>
+              <li class="list-group-item">AWS Services (EC2, S3, RDS)</li>
+              <li class="list-group-item">CI/CD Pipelines</li>
+              <li class="list-group-item">Docker & Containerization</li>
+              <li class="list-group-item">Version Control with Git</li>
+            </ul>
+            <h5 class="fw-bold mt-4">Data Analysis & Machine Learning</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Pandas</li>
+              <li class="list-group-item">NumPy</li>
+              <li class="list-group-item">TensorFlow</li>
+              <li class="list-group-item">Data Visualization</li>
+            </ul>
+            <h5 class="fw-bold mt-4">Software Development Practices</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Agile Methodologies (Scrum, Kanban)</li>
+              <li class="list-group-item">Test-Driven Development (TDD)</li>
+              <li class="list-group-item">Object-Oriented Design Principles</li>
+              <li class="list-group-item">Domain-Driven Design (DDD)</li>
+              <li class="list-group-item">Design Patterns</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="mb-4">
+        <h2>Education</h2>
+        <hr />
+        <article class="my-2">
+          <h3 class="fw-bold">Machine Learning Certificate</h3>
+          <p class="text-muted">
+            <a href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford University</a>
+            &nbsp;|&nbsp; 2021 - 2022 &nbsp;|&nbsp; Palo Alto, CA, USA
+          </p>
+        </article>
+        <hr />
+        <article class="my-2">
+          <h3 class="fw-bold">Engineer of Evaluations and Judicial Forensics</h3>
+          <p class="text-muted">
+            <a href="https://www.uff.br/" target="_blank" rel="noopener noreferrer">Universidade Federal Fluminense</a>
+            &nbsp;|&nbsp; 2018 - 2019 &nbsp;|&nbsp; Rio de Janeiro, Brazil
+          </p>
+        </article>
+        <hr />
+        <article class="my-2">
+          <h3 class="fw-bold">Bachelor's Degree in Mechanical Engineering</h3>
+          <p class="text-muted">
+            <a href="http://www.cefet-rj.br/" target="_blank" rel="noopener noreferrer"
+              >Cefet/RJ - Centro Federal de Educação Tecnológica Celso Suckow da Fonseca</a
+            >
+            &nbsp;|&nbsp; 2012 - 2019 &nbsp;|&nbsp; Rio de Janeiro, Brazil
+          </p>
+        </article>
+        <hr />
+        <article class="my-2">
+          <h3 class="fw-bold">Bachelor's Degree in Mechanical Engineering (Exchange Program)</h3>
+          <p class="text-muted">
+            <a href="https://www.th-deg.de/" target="_blank" rel="noopener noreferrer">Technische Hochschule Deggendorf</a>
+            &nbsp;|&nbsp; 2015 - 2016 &nbsp;|&nbsp; Deggendorf, Germany
+          </p>
+        </article>
+        <hr />
+        <article class="my-2">
+          <h3 class="fw-bold">German Language Course</h3>
+          <p class="text-muted">
+            <a href="https://www.iik-duesseldorf.de/" target="_blank" rel="noopener noreferrer"
+              >Institut für Internationale Kommunikation</a
+            >
+            &nbsp;|&nbsp; 2014 &nbsp;|&nbsp; Düsseldorf, Germany
+          </p>
+        </article>
+        <hr />
+        <article class="my-2">
+          <h3 class="fw-bold">English Language Course (Exchange Program)</h3>
+          <p class="text-muted">
+            <a href="https://www.kaplaninternational.com/" target="_blank" rel="noopener noreferrer"
+              >Kaplan International Center</a
+            >
+            &nbsp;|&nbsp; 2013 &nbsp;|&nbsp; Santa Barbara, CA, USA
+          </p>
+        </article>
+      </section>
+
+      <!-- Languages Section -->
+      <section id="languages" class="mb-2">
+        <h2>Languages</h2>
+        <hr />
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <h5 class="fw-bold">Portuguese</h5>
+            <p class="text-muted">Native proficiency</p>
+          </li>
+          <li class="mb-2">
+            <h5 class="fw-bold">English</h5>
+            <p class="text-muted">Fluent | Exchange program in the USA</p>
+          </li>
+          <li class="mb-2">
+            <h5 class="fw-bold">German</h5>
+            <p class="text-muted">Professional working proficiency | Exchange program in Germany | Telc B1 Certification</p>
+          </li>
+          <li class="mb-2">
+            <h5 class="fw-bold">Spanish</h5>
+            <p class="text-muted">Intermediate proficiency | Frequent use in personal and professional contexts</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-light">
+      <p class="mb-0">&copy; 2024 Antonio Candido Rodrigues Rapozo</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-..."
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom JS -->
+    <script>
+      // Smooth scrolling for internal links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetElement = document.querySelector(this.getAttribute("href"));
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          } else {
+            // If target element not found, scroll to top
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
