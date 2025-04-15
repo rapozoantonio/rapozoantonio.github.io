@@ -62,7 +62,152 @@
       crossorigin="anonymous"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      /* General styling */
+      body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        color: #2c3e50;
+      }
+      
+      section {
+        margin-bottom: 2rem;
+      }
+      
+      hr {
+        margin: 1rem 0;
+        opacity: 0.25;
+      }
+      
+      /* Profile image styling */
+      .profile-img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border: 3px solid #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+      
+      /* Experience and Education styling */
+      .time-period {
+        font-size: 0.9rem;
+      }
+      
+      /* Skills section styling */
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+      }
+      
+      .skills-container > div {
+        flex: 1;
+        min-width: 300px;
+      }
+      
+      .skill-category {
+        margin-bottom: 1.5rem;
+      }
+      
+      .skill-category h3 {
+        font-size: 1.1rem;
+        color: #2980b9;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+      
+      .skill-list {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+      
+      .skill-item {
+        background-color: #f8f9fa;
+        padding: 8px 12px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        border-left: 3px solid #3498db;
+      }
+      
+      /* Print-specific styles for PDF export */
+      @media print {
+        body {
+          font-size: 12pt;
+          line-height: 1.4;
+        }
+        
+        nav, footer {
+          display: none;
+        }
+        
+        .container {
+          width: 100%;
+          max-width: 100%;
+          padding: 0;
+          margin: 0;
+        }
+        
+        h1 {
+          font-size: 18pt;
+        }
+        
+        h2 {
+          font-size: 16pt;
+          margin-top: 15pt;
+          padding-top: 15pt;
+          border-top: 1pt solid #ddd;
+          page-break-before: auto;
+        }
+        
+        h3 {
+          font-size: 14pt;
+        }
+        
+        section {
+          page-break-inside: avoid;
+        }
+        
+        #profile, #experience, #skills, #education, #languages {
+          page-break-after: auto;
+        }
+        
+        /* Ensure new sections start on a new page if needed */
+        #experience {
+          page-break-before: always;
+        }
+        
+        #education {
+          page-break-before: always;
+        }
+        
+        /* Avoiding orphaned headers */
+        h2, h3, h4 {
+          page-break-after: avoid;
+        }
+        
+        /* Avoid breaking a list item across pages */
+        li {
+          page-break-inside: avoid;
+        }
+        
+        .skills-container > div {
+          width: 48%;
+          page-break-inside: avoid;
+        }
+        
+        .skill-category {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
   </head>
   <body id="top">
     <!-- Navigation -->
@@ -105,7 +250,7 @@
     <!-- Main Content -->
     <main class="container my-4">
       <!-- Profile Section -->
-      <section id="profile" class="mb-4">
+      <section id="profile" class="mb-5">
         <div class="row align-items-center">
           <div class="col-md-3 text-center">
             <!-- Profile Picture -->
@@ -143,32 +288,26 @@
         <!-- About Section -->
         <div class="mt-4">
           <h2>About</h2>
-          <p class="text-muted">
-            I am a full-stack software engineer delivering scalable and reliable products for transportation agencies. With
-            over three years of experience in back-end and front-end development—proficient in Vue.js, React.js, C#, .NET,
-            and databases like Oracle SQL Developer and SQL Server—I build comprehensive software solutions that meet complex
-            needs.
+          <p>
+              I believe in building software that matters. That's why I work on critical transportation infrastructure systems used by State DOTs and local agencies—technology that directly impacts the trillion-dollar transportation sector. How? By leveraging my full-stack development expertise across Vue.js, React.js, React Native, C#, .NET, and various database technologies to create solutions that are both robust and user-focused.
           </p>
-          <p class="text-muted">
-            Passionate about innovation, I thrive on challenging projects that push technological boundaries. My interest in
-            artificial intelligence led me to integrate AI capabilities using the OpenAI API, enhancing functionality and
-            user experience.
+          <p>
+              Why integrate artificial intelligence? Because it transforms user experiences and solves complex problems in new ways. I've implemented AI capabilities via the OpenAI API that not only enhance functionality but create more intuitive interfaces. At Mayvue, I'm driven by the opportunity to grow in an environment where innovation is valued and personal ambition is encouraged.
           </p>
-          <p class="text-muted">
-            Currently pursuing the AWS Solutions Architect certification, I am expanding my expertise in cloud technologies
-            to architect secure, scalable solutions on the AWS platform.
+          <p>
+              With 2 AWS certifications already completed, I'm pursuing the Solutions Architect Professional designation to develop a holistic view of cloud architecture. Why? To design systems that are fault-tolerant, scalable, and cost-effective. My goal isn't collecting credentials but applying this expertise to create enterprise solutions that deliver real business value.
           </p>
         </div>
       </section>
 
       <!-- Experience Section -->
-      <section id="experience" class="mb-4">
+      <section id="experience" class="mb-5">
         <h2>Experience</h2>
         <hr />
         <!-- Mayvue Solutions -->
         <article class="my-4">
           <h3 class="fw-bold">Software Engineer <span class="text-muted">@ Mayvue Solutions</span></h3>
-          <p class="text-muted">
+          <p class="text-muted time-period">
             <i class="far fa-calendar-alt" aria-hidden="true"></i> March 2022 - Present &nbsp;|&nbsp;
             <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Pittsburgh, PA, USA
           </p>
@@ -190,7 +329,7 @@
           <h3 class="fw-bold">
             Data Engineer | Software Engineer | BI Consultant <span class="text-muted">@ Supply Marine Serviços</span>
           </h3>
-          <p class="text-muted">
+          <p class="text-muted time-period">
             <i class="far fa-calendar-alt" aria-hidden="true"></i> October 2020 - December 2021 &nbsp;|&nbsp;
             <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Rio de Janeiro, Brazil
           </p>
@@ -207,7 +346,7 @@
         <!-- TechnipFMC -->
         <article class="my-4">
           <h3 class="fw-bold">Simulation Engineer Jr. <span class="text-muted">@ TechnipFMC</span></h3>
-          <p class="text-muted">
+          <p class="text-muted time-period">
             <i class="far fa-calendar-alt" aria-hidden="true"></i> December 2017 - September 2020 &nbsp;|&nbsp;
             <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Rio de Janeiro, Brazil
           </p>
@@ -226,7 +365,7 @@
         <!-- CNPq Researcher -->
         <article class="my-4">
           <h3 class="fw-bold">Researcher <span class="text-muted">@ CNPq</span></h3>
-          <p class="text-muted">
+          <p class="text-muted time-period">
             <i class="far fa-calendar-alt" aria-hidden="true"></i> September 2016 - September 2018 &nbsp;|&nbsp;
             <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Rio de Janeiro, Brazil
           </p>
@@ -245,7 +384,7 @@
           <h3 class="fw-bold">
             Manufacturing Processes Developer Intern <span class="text-muted">@ ZF Friedrichshafen AG</span>
           </h3>
-          <p class="text-muted">
+          <p class="text-muted time-period">
             <i class="far fa-calendar-alt" aria-hidden="true"></i> February 2016 - June 2016 &nbsp;|&nbsp;
             <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Passau, Germany
           </p>
@@ -258,71 +397,90 @@
       </section>
 
       <!-- Skills Section -->
-      <section id="skills" class="mb-4">
+      <section id="skills" class="mb-5">
         <h2>Skills</h2>
         <hr />
-        <div class="row">
-          <div class="col-md-6">
-            <h5 class="fw-bold">Core Technical Expertise</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><strong>Full-Stack Development</strong>: Vue.js, React.js, C#, .NET</li>
-              <li class="list-group-item">
-                <strong>Cloud Computing</strong>: AWS (pursuing Solutions Architect certification), Azure
-              </li>
-              <li class="list-group-item"><strong>Database Management</strong>: SQL Server, Oracle SQL Developer</li>
-              <li class="list-group-item"><strong>Artificial Intelligence Integration</strong>: OpenAI API, LangChain</li>
-              <li class="list-group-item">
-                <strong>Data Engineering</strong>: Data Pipelines, ETL Processes, Data Warehousing
-              </li>
-            </ul>
-            <h5 class="fw-bold mt-4">Programming Languages</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">C#</li>
-              <li class="list-group-item">JavaScript</li>
-              <li class="list-group-item">Python</li>
-              <li class="list-group-item">SQL</li>
-            </ul>
-            <h5 class="fw-bold mt-4">Web Development Frameworks</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Vue.js</li>
-              <li class="list-group-item">React.js</li>
-              <li class="list-group-item">.NET Core</li>
-              <li class="list-group-item">ASP.NET MVC</li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <h5 class="fw-bold">DevOps & Cloud Technologies</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Azure DevOps</li>
-              <li class="list-group-item">AWS Services (EC2, S3, RDS)</li>
-              <li class="list-group-item">CI/CD Pipelines</li>
-              <li class="list-group-item">Docker & Containerization</li>
-              <li class="list-group-item">Version Control with Git</li>
-            </ul>
-            <h5 class="fw-bold mt-4">Data Analysis & Machine Learning</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Pandas</li>
-              <li class="list-group-item">NumPy</li>
-              <li class="list-group-item">TensorFlow</li>
-              <li class="list-group-item">Data Visualization</li>
-            </ul>
-            <h5 class="fw-bold mt-4">Software Development Practices</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Agile Methodologies (Scrum, Kanban)</li>
-              <li class="list-group-item">Test-Driven Development (TDD)</li>
-              <li class="list-group-item">Object-Oriented Design Principles</li>
-              <li class="list-group-item">Domain-Driven Design (DDD)</li>
-              <li class="list-group-item">Design Patterns</li>
-            </ul>
-          </div>
+        <div class="skills-container">
+            <div>
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Vue.js (Primary)</li>
+                        <li class="skill-item">React.js</li>
+                        <li class="skill-item">React Native</li>
+                        <li class="skill-item">JavaScript/TypeScript</li>
+                        <li class="skill-item">HTML5/CSS3</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">C# / .NET</li>
+                        <li class="skill-item">JavaScript / TypeScript</li>
+                        <li class="skill-item">Python</li>
+                        <li class="skill-item">API Development (REST, GraphQL)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Cloud Computing</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">2X AWS Solutions Architect Certified</li>
+                        <li class="skill-item">Azure</li>
+                        <li class="skill-item">Firebase</li>
+                        <li class="skill-item">Serverless Architecture</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <div class="skill-category">
+                    <h3>Database Systems</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">SQL (SQL Server, Oracle, PostgreSQL, MySQL)</li>
+                        <li class="skill-item">NoSQL (Firestore, DynamoDB, MongoDB)</li>
+                        <li class="skill-item">Data Warehousing</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>AI & LLM Integration</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">OpenAI API</li>
+                        <li class="skill-item">LangChain</li>
+                        <li class="skill-item">Semantic Kernel</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>DevOps & Tools</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">CI/CD Pipelines</li>
+                        <li class="skill-item">Docker & Containerization</li>
+                        <li class="skill-item">Git / Version Control</li>
+                        <li class="skill-item">Azure DevOps</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Software Development Practices</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Agile (Scrum, Kanban)</li>
+                        <li class="skill-item">Test-Driven Development</li>
+                        <li class="skill-item">Domain-Driven Design</li>
+                        <li class="skill-item">Design Patterns</li>
+                    </ul>
+                </div>
+            </div>
         </div>
       </section>
 
       <!-- Education Section -->
-      <section id="education" class="mb-4">
+      <section id="education" class="mb-5">
         <h2>Education</h2>
         <hr />
-        <article class="my-2">
+        <article class="my-3">
           <h3 class="fw-bold">Machine Learning Certificate</h3>
           <p class="text-muted">
             <a href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford University</a>
@@ -330,7 +488,7 @@
           </p>
         </article>
         <hr />
-        <article class="my-2">
+        <article class="my-3">
           <h3 class="fw-bold">Engineer of Evaluations and Judicial Forensics</h3>
           <p class="text-muted">
             <a href="https://www.uff.br/" target="_blank" rel="noopener noreferrer">Universidade Federal Fluminense</a>
@@ -338,7 +496,7 @@
           </p>
         </article>
         <hr />
-        <article class="my-2">
+        <article class="my-3">
           <h3 class="fw-bold">Bachelor's Degree in Mechanical Engineering</h3>
           <p class="text-muted">
             <a href="http://www.cefet-rj.br/" target="_blank" rel="noopener noreferrer"
@@ -348,7 +506,7 @@
           </p>
         </article>
         <hr />
-        <article class="my-2">
+        <article class="my-3">
           <h3 class="fw-bold">Bachelor's Degree in Mechanical Engineering (Exchange Program)</h3>
           <p class="text-muted">
             <a href="https://www.th-deg.de/" target="_blank" rel="noopener noreferrer">Technische Hochschule Deggendorf</a>
@@ -356,7 +514,7 @@
           </p>
         </article>
         <hr />
-        <article class="my-2">
+        <article class="my-3">
           <h3 class="fw-bold">German Language Course</h3>
           <p class="text-muted">
             <a href="https://www.iik-duesseldorf.de/" target="_blank" rel="noopener noreferrer"
@@ -366,7 +524,7 @@
           </p>
         </article>
         <hr />
-        <article class="my-2">
+        <article class="my-3">
           <h3 class="fw-bold">English Language Course (Exchange Program)</h3>
           <p class="text-muted">
             <a href="https://www.kaplaninternational.com/" target="_blank" rel="noopener noreferrer"
@@ -378,27 +536,31 @@
       </section>
 
       <!-- Languages Section -->
-      <section id="languages" class="mb-2">
+      <section id="languages" class="mb-5">
         <h2>Languages</h2>
         <hr />
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <h5 class="fw-bold">Portuguese</h5>
-            <p class="text-muted">Native proficiency</p>
-          </li>
-          <li class="mb-2">
-            <h5 class="fw-bold">English</h5>
-            <p class="text-muted">Fluent | Exchange program in the USA</p>
-          </li>
-          <li class="mb-2">
-            <h5 class="fw-bold">German</h5>
-            <p class="text-muted">Professional working proficiency | Exchange program in Germany | Telc B1 Certification</p>
-          </li>
-          <li class="mb-2">
-            <h5 class="fw-bold">Spanish</h5>
-            <p class="text-muted">Intermediate proficiency | Frequent use in personal and professional contexts</p>
-          </li>
-        </ul>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <h5 class="fw-bold">Portuguese</h5>
+              <p class="text-muted mb-0">Native proficiency</p>
+            </div>
+            <div class="mb-3">
+              <h5 class="fw-bold">English</h5>
+              <p class="text-muted mb-0">Fluent | Exchange program in the USA</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <h5 class="fw-bold">German</h5>
+              <p class="text-muted mb-0">Professional working proficiency | Exchange program in Germany | Telc B1 Certification</p>
+            </div>
+            <div class="mb-3">
+              <h5 class="fw-bold">Spanish</h5>
+              <p class="text-muted mb-0">Intermediate proficiency | Frequent use in personal and professional contexts</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
