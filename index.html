@@ -139,72 +139,145 @@
       
       /* Print-specific styles for PDF export */
       @media print {
+        /* Page setup */
+        @page {
+          size: letter;
+          margin: 0.5in;
+        }
+        
+        /* Basic print styling */
         body {
-          font-size: 12pt;
-          line-height: 1.4;
+          font-size: 11pt;
+          line-height: 1.3;
+          background-color: white !important;
+          color: black !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
         }
         
-        nav, footer {
-          display: none;
+        /* Hide navigation, footer, and print button when printing */
+        nav, footer, .navbar, .no-print {
+          display: none !important;
         }
         
+        /* Expand container to full width */
         .container {
-          width: 100%;
-          max-width: 100%;
-          padding: 0;
-          margin: 0;
+          width: 100% !important;
+          max-width: 100% !important;
+          padding: 0 !important;
+          margin: 0 !important;
         }
         
+        /* Adjust spacing for print */
+        .mb-5 {
+          margin-bottom: 15pt !important;
+        }
+        
+        .mt-4 {
+          margin-top: 12pt !important;
+        }
+        
+        /* Typography adjustments */
         h1 {
-          font-size: 18pt;
+          font-size: 18pt !important;
+          margin-bottom: 8pt !important;
         }
         
         h2 {
-          font-size: 16pt;
-          margin-top: 15pt;
-          padding-top: 15pt;
-          border-top: 1pt solid #ddd;
-          page-break-before: auto;
+          font-size: 16pt !important;
+          margin-top: 16pt !important;
+          padding-top: 8pt !important;
+          border-top: 1pt solid #ddd !important;
+          break-after: avoid !important;
         }
         
         h3 {
-          font-size: 14pt;
+          font-size: 13pt !important;
+          break-after: avoid !important;
         }
         
+        p, li {
+          font-size: 11pt !important;
+          orphans: 3 !important;
+          widows: 3 !important;
+        }
+        
+        /* Section page break control */
         section {
-          page-break-inside: avoid;
+          break-inside: avoid-page !important;
         }
         
-        #profile, #experience, #skills, #education, #languages {
-          page-break-after: auto;
-        }
-        
-        /* Ensure new sections start on a new page if needed */
+        /* Ensure main sections start on new pages */
         #experience {
-          page-break-before: always;
+          break-before: page !important;
+        }
+        
+        #skills {
+          break-before: page !important;
         }
         
         #education {
-          page-break-before: always;
+          break-before: page !important;
         }
         
-        /* Avoiding orphaned headers */
+        /* Avoid orphaned headers */
         h2, h3, h4 {
-          page-break-after: avoid;
+          break-after: avoid-page !important;
         }
         
-        /* Avoid breaking a list item across pages */
+        /* Prevent list items from breaking across pages */
         li {
-          page-break-inside: avoid;
+          break-inside: avoid-page !important;
+        }
+        
+        /* Make sure article elements don't break */
+        article {
+          break-inside: avoid-page !important;
+          margin-bottom: 12pt !important;
+        }
+        
+        /* Handle skills section properly */
+        .skills-container {
+          display: flex !important;
+          flex-wrap: wrap !important;
+          gap: 20px !important;
         }
         
         .skills-container > div {
-          width: 48%;
-          page-break-inside: avoid;
+          width: 48% !important;
+          break-inside: avoid-page !important;
         }
         
         .skill-category {
-          page-break-inside: avoid;
+          break-inside: avoid-page !important;
+          margin-bottom: 12pt !important;
+        }
+        
+        /* Make skill items print with colors */
+        .skill-item {
+          background-color: #f8f9fa !important;
+          border-left: 3px solid #3498db !important;
+          padding: 6pt 9pt !important;
+          margin-bottom: 5pt !important;
+        }
+        
+        /* Ensure links print correctly with underlines */
+        a {
+          text-decoration: underline !important;
+          color: #2c3e50 !important;
+        }
+        
+        /* Fix for HR elements */
+        hr {
+          border: 0.5pt solid #ddd !important;
+          margin: 8pt 0 !important;
+        }
+        
+        /* Optimize image for printing */
+        .profile-img {
+          max-width: 150px !important;
+          max-height: 150px !important;
+          print-color-adjust: exact !important;
         }
       }
     </style>
@@ -313,14 +386,14 @@
           </p>
           <ul>
             <li>
-              Develop and maintain web applications using Vue.js, React.js, C#, and .NET, contributing to high-quality
-              software products.
+              Architect and develop full stack applications for critical transportation infrastructure using Vue.js, React.js, C#, and .NET with RESTful APIs and OpenAPI specifications.
             </li>
             <li>
-              Collaborate with cross-functional teams to define, design, and deploy new features, enhancing product
-              functionality and user experience.
+              Engineer scalable and robust solutions that meet strict government compliance requirements while delivering intuitive interfaces for transportation professionals.
             </li>
-            <li>Implement best practices in software design and development, improving code quality and maintainability.</li>
+            <li>
+              Implement AI-powered features using OpenAI API, driving innovation within legacy systems and enhancing user workflows through intelligent automation.
+            </li>
           </ul>
         </article>
         <hr />
@@ -335,11 +408,14 @@
           </p>
           <ul>
             <li>
-              Architected a data pipeline connecting all data sources from HVAC-R services to management systems,
-              streamlining data flow.
+              Built ETL data pipelines in Python integrating disparate HVAC-R service data sources into a unified platform, enabling enterprise-wide analytics capabilities.
             </li>
-            <li>Increased data reliability, enhancing decision-making during operations and strategic planning.</li>
-            <li>Developed business intelligence tools to enhance operational efficiency.</li>
+            <li>
+              Implemented data validation algorithms using pandas and NumPy to ensure data integrity across mission-critical business intelligence systems.
+            </li>
+            <li>
+              Developed interactive Power BI dashboards with Python integration, transforming operational data into actionable insights for executive decision-making.
+            </li>
           </ul>
         </article>
         <hr />
@@ -352,30 +428,34 @@
           </p>
           <ul>
             <li>
-              Delivered over 50 equipment designs evaluated through Finite Element Method (FEM) to major oil and gas
-              companies.
+              Developed parametric modeling software using Ansys Parametric Design Language (APDL) to generate 50+ equipment designs for FEM analysis in oil and gas applications.
             </li>
             <li>
-              Reduced design development needs by 30% by creating a historical data portfolio system, boosting efficiency.
+              Created a software system to catalog, query, and analyze 200+ equipment designs, reducing development time by 30% through code reuse and pattern identification.
             </li>
-            <li>Collaborated in standardizing equipment, increasing delivery speed and improving supplier negotiations.</li>
+            <li>
+              Engineered programming libraries and reusable modules for simulation standardization, optimizing resource utilization and strengthening supplier negotiation position.
+            </li>
           </ul>
         </article>
         <hr />
-        <!-- CNPq Researcher -->
+        <!-- National Council for Scientific and Technological Development -->
         <article class="my-4">
-          <h3 class="fw-bold">Researcher <span class="text-muted">@ CNPq</span></h3>
+          <h3 class="fw-bold">Researcher <span class="text-muted">@ National Council for Scientific and Technological Development</span></h3>
           <p class="text-muted time-period">
             <i class="far fa-calendar-alt" aria-hidden="true"></i> September 2016 - September 2018 &nbsp;|&nbsp;
             <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Rio de Janeiro, Brazil
           </p>
           <ul>
-            <li>Contributed to academic research with two reports and a published article in mechanical engineering.</li>
             <li>
-              Focused on computational methods and numerical analysis, specializing in finite element analysis of vibration
-              absorbers.
+              Programmed computational models in APDL for vibration absorbers, publishing findings in a peer-reviewed engineering journal.
             </li>
-            <li>Conducted finite element analysis, enhancing understanding of vibration absorber performance.</li>
+            <li>
+              Developed algorithmic solutions in Python and MathCAD to solve complex numerical analysis problems with industry-standard accuracy.
+            </li>
+            <li>
+              Created data visualization tools for finite element analysis results, enhancing collaboration and enabling evidence-based research conclusions.
+            </li>
           </ul>
         </article>
         <hr />
@@ -389,9 +469,15 @@
             <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Passau, Germany
           </p>
           <ul>
-            <li>Redesigned factory layouts, increasing efficiency and reducing material delivery times.</li>
-            <li>Created dashboards to monitor Overall Equipment Effectiveness (OEE), improving operational insights.</li>
-            <li>Collaborated with cross-functional international teams, contributing to successful project outcomes.</li>
+            <li>
+              Engineered VBA automation solutions that eliminated manual processes in factory management workflows, increasing operational throughput.
+            </li>
+            <li>
+              Developed real-time OEE monitoring dashboards with Excel and VBA, providing actionable performance metrics to manufacturing leadership.
+            </li>
+            <li>
+              Built cross-functional workflow tools that standardized processes across international teams, improving interdepartmental data exchange and collaboration.
+            </li>
           </ul>
         </article>
       </section>
@@ -426,7 +512,7 @@
                 <div class="skill-category">
                     <h3>Cloud Computing</h3>
                     <ul class="skill-list">
-                        <li class="skill-item">2X AWS Solutions Architect Certified</li>
+                        <li class="skill-item">AWS (2x Certified: Practitioner, Associate)</li>
                         <li class="skill-item">Azure</li>
                         <li class="skill-item">Firebase</li>
                         <li class="skill-item">Serverless Architecture</li>
@@ -595,6 +681,31 @@
             });
           }
         });
+      });
+      
+      // Function to prepare for print/PDF export
+      function preparePrint() {
+        // Expand all sections to ensure they're visible in the PDF
+        document.querySelectorAll('.collapse').forEach(function(el) {
+          el.classList.add('show');
+        });
+        
+        // After a slight delay to ensure DOM updates, trigger print
+        setTimeout(function() {
+          window.print();
+        }, 300);
+      }
+      
+      // Add a print button to make PDF export easier
+      document.addEventListener('DOMContentLoaded', function() {
+        const printBtn = document.createElement('button');
+        printBtn.innerHTML = '<i class="fas fa-file-pdf"></i> Export to PDF';
+        printBtn.className = 'btn btn-primary position-fixed no-print';
+        printBtn.style.bottom = '20px';
+        printBtn.style.right = '20px';
+        printBtn.style.zIndex = '1000';
+        printBtn.addEventListener('click', preparePrint);
+        document.body.appendChild(printBtn);
       });
     </script>
   </body>
