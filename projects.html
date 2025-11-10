@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Antonio Candido Rodrigues Rapozo" />
+    <meta
+      name="description"
+      content="Projects by Antonio Rapozo - Full-Stack Engineer specializing in Vue.js, React, C#, .NET, and AWS"
+    />
+    <meta
+      name="keywords"
+      content="Antonio Rapozo, Projects, Portfolio, Vue.js, React.js, TypeScript, Full Stack Developer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Antonio Rapozo</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- Projects Page CSS -->
+    <link rel="stylesheet" href="css/projects.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Antonio Rapozo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/rapozoantonio" target="_blank">GitHub</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/rapozoantonio/" target="_blank">LinkedIn</a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-link nav-link" id="darkModeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-main">
+      <!-- Page Header with Profile -->
+      <div class="page-header-profile">
+        <img
+          class="profile-img"
+          src="https://avatars.githubusercontent.com/u/28830436?v=4"
+          alt="Antonio Rapozo"
+        />
+        <div class="header-content">
+          <h1 class="page-title">
+            Personal Projects
+            <span class="projects-count" id="projectsCount"></span>
+          </h1>
+          <p class="page-subtitle">Side projects solving real problems</p>
+        </div>
+      </div>
+
+      <!-- Introduction -->
+      <div class="projects-intro">
+        <p>
+          Problems I've encountered personally or through my network, turned into products with real users. Built during evenings (off-hours) and weekends, each project represents end-to-end ownership: identifying the opportunity, building (or leading) the technical solution, and shipping to production.
+        </p>
+      </div>
+
+      <!-- Projects List -->
+      <div id="projectsList">
+        <!-- Project 1: Cash-on-Delivery Shopify App -->
+        <div class="project-card" data-name="shopify saas application e-commerce cod cash-on-delivery" data-tech="vue nodejs shopify postgresql stripe firebase">
+          <div class="project-header">
+            <img src="images/audit-manager-pro.webp" alt="Cash-on-Delivery Shopify App Logo" class="project-logo" />
+            <h2 class="project-title"><a href="https://apps.shopify.com/audit-manager-pro?locale=pt-BR" target="_blank" rel="noopener noreferrer">Cash-on-Delivery Shopify App</a></h2>
+            <span class="revenue-badge revenue-mid" title="Mid Revenue">$$</span>
+            <span class="team-badge"><i class="fas fa-users"></i> Led 9 people</span>
+            <a href="https://apps.shopify.com/audit-manager-pro?locale=pt-BR" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> View on Shopify App Store</a>
+          </div>
+          <div class="project-timeline">
+            <span><i class="far fa-calendar"></i> 6 months</span>
+            <span><i class="fas fa-check-circle"></i> Delivered December 2024</span>
+            <span><i class="fas fa-handshake"></i> Acquired by e-commerce influencers for $30k+ USD</span>
+          </div>
+          
+          <div class="project-story">
+            <p><strong>The Origin:</strong></p>
+            <p class="project-description">
+              A close friend—one of South America's largest e-commerce influencers—shared how cash-on-delivery (COD) payment methods are severely under-supported in Shopify across Latin America. Most countries in the region rely heavily on COD, but Shopify's native support is limited, forcing merchants to use workarounds or lose customers at checkout.
+            </p>
+            
+            <p><strong>What I Built:</strong></p>
+          </div>
+          <ul class="project-highlights">
+            <li>Assembled and led 9-person engineering team (2 technical leads + 7 rotating developers)</li>
+            <li>Architected full-stack Shopify app supporting COD workflows</li>
+            <li>Integrated with regional payment processors and logistics providers</li>
+            <li>Built merchant dashboard for order management and COD tracking</li>
+            <li>Webhook system for real-time order status updates</li>
+            <li>Successfully deployed to production serving multiple high-volume merchants</li>
+          </ul>
+          
+          <div class="project-outcome">
+            <p><strong>Outcome:</strong> Three major e-commerce influencers partnered to acquire the application for $30,000+ USD in December 2024.</p>
+            <p><strong>My Role:</strong> Technical leadership, architecture decisions, team coordination, development oversight, client communication, and product delivery.</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-badge tech-primary"><span class="language-dot lang-react"></span>React</span>
+            <span class="tech-badge tech-primary"><span class="language-dot lang-javascript"></span>JavaScript</span>
+            <span class="tech-badge">Liquid</span>
+            <span class="tech-badge">Shopify API</span>
+            <span class="tech-badge">REST API</span>
+            <span class="tech-badge">Heroku</span>
+            <span class="tech-badge">AWS</span>
+          </div>
+          <div class="skills-demonstrated">
+            <div class="skills-label">Skills Demonstrated:</div>
+            <div class="tech-stack">
+              <span class="skill-badge">Technical Leadership</span>
+              <span class="skill-badge">Team Building</span>
+              <span class="skill-badge">E-commerce Development</span>
+              <span class="skill-badge">SaaS Architecture</span>
+              <span class="skill-badge">Problem Identification</span>
+              <span class="skill-badge">Product Development</span>
+            </div>
+          </div>
+          <div class="project-status">
+            <span class="status-badge status-completed"><i class="fas fa-check-circle"></i> Completed & Sold</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Event Management Platform for Brazilian Entertainment -->
+        <div class="project-card" data-name="event management platform brazilian entertainment ticketing" data-tech="react nodejs mongodb stripe websocket ai">
+          <div class="project-header">
+            <img src="images/jubilos.png" alt="Event Management Platform Logo" class="project-logo" />
+            <h2 class="project-title">Event Management Platform for Brazilian Entertainment Industry</h2>
+            <span class="revenue-badge revenue-low" title="Low Revenue">$</span>
+            <span class="team-badge"><i class="fas fa-users"></i> Led 4 people</span>
+            <div class="project-links">
+              <a href="https://jubi.click/events/br/riodejaneiro" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Public Event Listings</a>
+              <a href="https://admin.jubi.click/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Producer Dashboard</a>
+            </div>
+          </div>
+          <div class="project-timeline">
+            <span><i class="far fa-calendar"></i> 12 months</span>
+            <span><i class="fas fa-check-circle"></i> Delivered March 2025</span>
+            <span><i class="fas fa-users"></i> 54 team members enrolled, pending production rollout</span>
+          </div>
+          
+          <div class="project-story">
+            <p><strong>The Problem I Witnessed:</strong></p>
+            <p class="project-description">
+              During COVID-19, I watched friends in Rio's entertainment industry shut down operations. The crisis revealed systemic technology gaps: manual processes, poor communication, and platforms that couldn't handle high-end event requirements in Brazil. Most critically, producers only knew if events were profitable <em>days after they ended</em>.
+            </p>
+            
+            <p><strong>What I Built:</strong></p>
+            <p class="project-description"><em>For Consumers:</em></p>
+          </div>
+          <ul class="project-highlights">
+            <li>Curated event discovery (AI-powered scraping filters quality events)</li>
+            <li>Clean interface replacing generic ticket platform chaos</li>
+          </ul>
+          
+          <div class="project-description"><em>For Producers:</em></div>
+          <ul class="project-highlights">
+            <li>Event management dashboard with AI assistance</li>
+            <li>VIP/special guest list tracking and coordination</li>
+            <li>Real-time analytics during events (not days later)</li>
+            <li>Customer LTV tracking across multiple events</li>
+            <li>Instant profitability visibility</li>
+            <li>Multi-role access (producers, promoters, operations staff)</li>
+          </ul>
+          
+          <div class="project-outcome">
+            <p><strong>Current Status:</strong> Delivered to event agency in Rio de Janeiro. 54 team members enrolled, pending production rollout as they transition from legacy systems.</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-badge tech-primary"><span class="language-dot lang-vue"></span>Vue.js</span>
+            <span class="tech-badge tech-primary"><span class="language-dot lang-javascript"></span>JavaScript</span>
+            <span class="tech-badge">Firebase</span>
+            <span class="tech-badge">OpenAI API</span>
+            <span class="tech-badge">REST API</span>
+          </div>
+          <div class="skills-demonstrated">
+            <div class="skills-label">Skills Demonstrated:</div>
+            <div class="tech-stack">
+              <span class="skill-badge">Problem Solving</span>
+              <span class="skill-badge">Industry Analysis</span>
+              <span class="skill-badge">Full-Stack Development</span>
+              <span class="skill-badge">Real-Time Systems</span>
+              <span class="skill-badge">AI Integration</span>
+              <span class="skill-badge">Stakeholder Management</span>
+            </div>
+          </div>
+          <div class="project-status">
+            <span class="status-badge status-completed"><i class="fas fa-check-circle"></i> Completed & Sold</span>
+          </div>
+        </div>
+
+        <!-- Project 3: FocusGuard - AI-Powered Productivity Extension -->
+        <div class="project-card" data-name="focusguard ai productivity chrome extension" data-tech="javascript chrome-extension openai firebase stripe">
+          <div class="project-header">
+            <img src="images/focus-guard.png" alt="FocusGuard Logo" class="project-logo" />
+            <h2 class="project-title"><a href="https://focusguardextension.com/" target="_blank" rel="noopener noreferrer">FocusGuard - AI-Powered Productivity Extension</a></h2>
+            <span class="team-badge"><i class="fas fa-users"></i> Led 2 people</span>
+            <div class="project-links">
+              <a href="https://focusguardextension.com/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Website</a>
+              <a href="https://chromewebstore.google.com/detail/focusguard-ai-powered-pro/YOUR_EXTENSION_ID" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Chrome Web Store</a>
+            </div>
+          </div>
+          <div class="project-timeline">
+            <span><i class="far fa-calendar"></i> Led 2-person team · 4 months</span>
+            <span><i class="fas fa-check-circle"></i> Launched July 4, 2025</span>
+            <span><i class="fas fa-users"></i> 83 active users (free tier)</span>
+          </div>
+          
+          <div class="project-story">
+            <p><strong>The Problem (My Own):</strong></p>
+            <p class="project-description">
+              I had 47 browser tabs open. Notion nested 5 levels deep. Trello, Cold Turkey, RescueTime, Momentum, multiple calendar apps... I was managing my productivity system more than doing actual work. Context-switching between 8 apps to check what I should be doing wasn't optimization—it was theater.
+            </p>
+            
+            <p><strong>What I Built:</strong></p>
+            <p class="project-description">Led a 2-person team to build one Chrome extension that replaced my entire productivity stack:</p>
+          </div>
+          <ul class="project-highlights">
+            <li>Distraction blocking while working</li>
+            <li>Goal and task tracking</li>
+            <li>Integrated calendar view</li>
+            <li>World clock for distributed team coordination</li>
+            <li><strong>AI goal-alignment checker:</strong> Analyzes if daily work actually moves you toward stated goals</li>
+          </ul>
+          
+          <div class="project-outcome">
+            <p class="project-description">
+              The AI component is the key differentiator—it's honest, sometimes uncomfortable, but it works. It tells you when you're busy but not productive.
+            </p>
+            <p><strong>Current Status:</strong> 83 active users on free tier, published on Chrome Web Store with freemium model. Learning about user acquisition for developer tools.</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-badge tech-primary"><span class="language-dot lang-react"></span>React</span>
+            <span class="tech-badge tech-primary"><span class="language-dot lang-javascript"></span>JavaScript</span>
+            <span class="tech-badge">Chrome Extension APIs</span>
+            <span class="tech-badge">OpenAI API</span>
+            <span class="tech-badge">REST API</span>
+          </div>
+          <div class="skills-demonstrated">
+            <div class="skills-label">Skills Demonstrated:</div>
+            <div class="tech-stack">
+              <span class="skill-badge">Problem Identification</span>
+              <span class="skill-badge">Technical Leadership</span>
+              <span class="skill-badge">Chrome Extension Development</span>
+              <span class="skill-badge">AI/LLM Integration</span>
+              <span class="skill-badge">Product Launch</span>
+            </div>
+          </div>
+          <div class="project-status">
+            <span class="status-badge status-completed"><i class="fas fa-check-circle"></i> Completed & Active</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-light mt-5">
+      <p class="mb-0">&copy; 2025 Antonio Candido Rodrigues Rapozo</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom JS -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeIcon = darkModeToggle.querySelector('i');
+        
+        // Check for saved dark mode preference or system preference
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.body.classList.add('dark-mode');
+          darkModeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+        
+        darkModeToggle.addEventListener('click', function() {
+          document.body.classList.toggle('dark-mode');
+          const isDark = document.body.classList.contains('dark-mode');
+          
+          if (isDark) {
+            darkModeIcon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'dark');
+          } else {
+            darkModeIcon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'light');
+          }
+        });
+
+        // Update projects count
+        const projectCards = document.querySelectorAll('.project-card');
+        const projectsCount = document.getElementById('projectsCount');
+        projectsCount.textContent = `(${projectCards.length})`;
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', function(e) {
+          const searchTerm = e.target.value.toLowerCase();
+          
+          projectCards.forEach(card => {
+            const name = card.getAttribute('data-name').toLowerCase();
+            const tech = card.getAttribute('data-tech').toLowerCase();
+            const description = card.querySelector('.project-description').textContent.toLowerCase();
+            
+            if (name.includes(searchTerm) || tech.includes(searchTerm) || description.includes(searchTerm)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+
+          // Update visible count
+          const visibleProjects = Array.from(projectCards).filter(card => card.style.display !== 'none').length;
+          projectsCount.textContent = `(${visibleProjects})`;
+        });
+      });
+    </script>
+  </body>
+</html>
