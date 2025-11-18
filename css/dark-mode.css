@@ -1,0 +1,108 @@
+/* =================================================================
+   DARK MODE STYLES
+   Shared across all pages - Toggle via JavaScript (.dark-mode class)
+   ================================================================= */
+
+/* Dark Mode Base */
+body.dark-mode {
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #c9d1d9;
+}
+
+/* Sections & Articles */
+body.dark-mode section {
+  background-color: #161b22;
+  border-color: #30363d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode article {
+  color: #c9d1d9;
+}
+
+body.dark-mode strong {
+  color: #c9d1d9;
+}
+
+/* Navigation */
+body.dark-mode .navbar {
+  background-color: #161b22 !important;
+  border-bottom: 1px solid #30363d;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+  color: #c9d1d9 !important;
+}
+
+body.dark-mode .nav-link:hover {
+  color: #58a6ff !important;
+}
+
+/* Alerts */
+body.dark-mode .alert-success {
+  background-color: rgba(63, 185, 80, 0.15) !important;
+  border-color: #3fb950 !important;
+  color: #3fb950 !important;
+}
+
+/* Typography */
+body.dark-mode .lead,
+body.dark-mode .text-muted {
+  color: #8b949e !important;
+}
+
+/* Links */
+body.dark-mode a {
+  color: #58a6ff;
+}
+
+body.dark-mode a:hover {
+  color: #79c0ff;
+}
+
+/* Horizontal Rules */
+body.dark-mode hr {
+  border-color: #30363d;
+  opacity: 1;
+  border-top-color: #30363d;
+}
+
+/* Skill Items */
+body.dark-mode .skill-item {
+  background-color: #161b22;
+  border-left-color: #58a6ff;
+  color: #c9d1d9;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background-color: #161b22 !important;
+  color: #8b949e;
+  border-top: 1px solid #30363d;
+}
+
+/* Dark Mode Toggle Button */
+body.dark-mode #darkModeToggle,
+body.dark-mode #darkModeToggle.btn-link {
+  color: #c9d1d9 !important;
+}
+
+body.dark-mode #darkModeToggle:hover,
+body.dark-mode #darkModeToggle.btn-link:hover {
+  color: #58a6ff !important;
+}
+
+/* Hide PDF Export Button in Dark Mode */
+body.dark-mode .no-print {
+  display: none !important;
+}

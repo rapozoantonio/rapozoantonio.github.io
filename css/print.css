@@ -1,0 +1,293 @@
+/* Print-specific styles for PDF export */
+      @media print {
+        /* Page setup */
+        @page {
+          size: letter;
+          margin: 0.5in;
+        }
+        
+        /* Basic print styling */
+        body {
+          font-size: 9.5pt;
+          line-height: 1.2;
+          background-color: white !important;
+          color: #333 !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        
+        /* Hide navigation, footer, and print button when printing */
+        nav, footer, .navbar, .no-print {
+          display: none !important;
+        }
+        
+        /* Expand container to full width */
+        .container {
+          width: 100% !important;
+          max-width: 100% !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        
+        /* Typography - US Resume Standards */
+        h1 {
+          font-size: 16pt !important;
+          margin-bottom: 4pt !important;
+          margin-top: 0 !important;
+          color: #2c3e50 !important;
+          font-weight: bold !important;
+        }
+        
+        h2 {
+          font-size: 12pt !important;
+          margin-top: 12pt !important;
+          margin-bottom: 6pt !important;
+          padding-top: 0 !important;
+          break-after: avoid !important;
+          color: #2c3e50 !important;
+          font-weight: bold !important;
+          padding-bottom: 2pt !important;
+        }
+        
+        h3 {
+          font-size: 11pt !important;
+          margin-bottom: 4pt !important;
+          margin-top: 6pt !important;
+          break-after: avoid !important;
+          color: #2c3e50 !important;
+          font-weight: bold !important;
+        }
+        
+        h4, h5, h6 {
+          color: #2c3e50 !important;
+          font-size: 10pt !important;
+          font-weight: bold !important;
+        }
+        
+        p, li {
+          font-size: 10pt !important;
+          margin-bottom: 5pt !important;
+          orphans: 2 !important;
+          widows: 2 !important;
+          line-height: 1.35 !important;
+        }
+        
+        .lead {
+          font-size: 10pt !important;
+          margin-bottom: 6pt !important;
+          color: #555 !important;
+          font-weight: normal !important;
+        }
+        
+        .text-muted {
+          color: #555 !important;
+        }
+        
+        .time-period {
+          font-size: 9pt !important;
+          margin-bottom: 4pt !important;
+          color: #555 !important;
+        }
+        
+        /* Spacing adjustments - US Resume Standards */
+        .mb-5 {
+          margin-bottom: 6pt !important;
+        }
+        
+        .mt-4 {
+          margin-top: 6pt !important;
+        }
+        
+        .my-4 {
+          margin-top: 6pt !important;
+          margin-bottom: 6pt !important;
+        }
+        
+        /* Lists - US Resume Standards */
+        ul {
+          margin-top: 5pt !important;
+          margin-bottom: 6pt !important;
+          padding-left: 18pt !important;
+        }
+        
+        li {
+          margin-bottom: 4pt !important;
+          line-height: 1.35 !important;
+        }
+        
+        .list-inline {
+          margin-bottom: 6pt !important;
+        }
+        
+        .list-inline-item {
+          font-size: 9pt !important;
+          margin-right: 8pt !important;
+        }
+        
+        /* Profile picture - hide in print for US resume standards */
+        .profile-img {
+          display: none !important;
+        }
+        
+        /* Hide profile image column and make content full width */
+        #profile .col-md-3 {
+          display: none !important;
+        }
+        
+        #profile .col-md-9 {
+          max-width: 100% !important;
+          flex: 0 0 100% !important;
+        }
+        
+        /* Ensure contact information is left-aligned */
+        #profile .list-inline {
+          text-align: left !important;
+          padding-left: 0 !important;
+        }
+        
+        /* Links */
+        a {
+          color: #2c3e50 !important;
+          text-decoration: none !important;
+        }
+        
+        a[href^="http"]:after {
+          content: none !important;
+        }
+        
+        /* HR elements - thinner */
+        hr {
+          border: 0 !important;
+          border-top: 0.5pt solid #ddd !important;
+          margin: 4pt 0 !important;
+          break-after: avoid !important;
+          opacity: 1 !important;
+        }
+        
+        /* PAGE BREAK CONTROL - 2 PAGE LAYOUT */
+        
+        /* PAGE 1: Profile Section (with About) + Start of Experience */
+        #profile {
+          break-after: avoid !important;
+          page-break-after: avoid !important;
+          margin-bottom: 10pt !important;
+        }
+        
+        /* Experience starts on page 1, continues naturally to page 2 */
+        #experience {
+          break-before: avoid !important;
+          break-after: avoid !important;
+          margin-bottom: 0 !important;
+        }
+        
+        /* PAGE 2: Continuation of Experience + Skills + Education + Languages */
+        #skills {
+          break-before: avoid !important;
+          break-after: avoid !important;
+          margin-bottom: 0 !important;
+          margin-top: 0 !important;
+        }
+        
+        #education {
+          break-before: avoid !important;
+          break-after: avoid !important;
+          margin-bottom: 0 !important;
+          margin-top: 0 !important;
+        }
+        
+        #languages {
+          break-before: avoid !important;
+          break-after: avoid !important;
+          margin-top: 0 !important;
+        }
+        
+        /* Prevent sections from breaking internally where possible */
+        section {
+          break-inside: avoid-page !important;
+          border: none !important;
+          box-shadow: none !important;
+          margin-bottom: 0 !important;
+          padding: 0 !important;
+        }
+        
+        /* Avoid orphaned headers */
+        h2, h3, h4 {
+          break-after: avoid-page !important;
+          page-break-after: avoid !important;
+        }
+        
+        /* Keep experience entries together if possible */
+        article {
+          break-inside: avoid !important;
+          page-break-inside: avoid !important;
+          margin-bottom: 8pt !important;
+        }
+        
+        /* Skills section layout - more compact */
+        .skills-container {
+          display: flex !important;
+          flex-wrap: wrap !important;
+          gap: 10px !important;
+        }
+        
+        .skills-container > div {
+          width: 48% !important;
+          break-inside: avoid !important;
+        }
+        
+        .skill-category {
+          break-inside: avoid !important;
+          page-break-inside: avoid !important;
+          margin-bottom: 8pt !important;
+        }
+        
+        .skill-category h3 {
+          font-size: 9.5pt !important;
+          margin-bottom: 3pt !important;
+          color: #2980b9 !important;
+        }
+        
+        /* Skill list - remove default list styling */
+        .skill-list {
+          list-style-type: none !important;
+          padding-left: 0 !important;
+          margin-bottom: 0 !important;
+        }
+        
+        /* Skill items - US Resume Standards */
+        .skill-item {
+          background-color: transparent !important;
+          padding: 2pt 0 !important;
+          margin-bottom: 2pt !important;
+          font-size: 9pt !important;
+          line-height: 1.3 !important;
+          color: #333 !important;
+        }
+        
+        /* Education and Languages - US Resume Standards */
+        #education article,
+        #languages .row > div {
+          margin-bottom: 8pt !important;
+        }
+        
+        #education h3,
+        #languages h5 {
+          font-size: 11pt !important;
+          margin-bottom: 3pt !important;
+          font-weight: bold !important;
+        }
+        
+        #education p,
+        #languages p,
+        #education .text-muted,
+        #languages .text-muted {
+          font-size: 9pt !important;
+          margin-bottom: 3pt !important;
+        }
+        
+        #education em,
+        #languages em {
+          font-size: 9pt !important;
+          font-style: italic !important;
+        }
+      }
