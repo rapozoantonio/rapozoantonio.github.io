@@ -292,6 +292,68 @@
             <span class="status-badge status-completed"><i class="fas fa-check-circle"></i> Completed & Active</span>
           </div>
         </div>
+
+        <!-- Project 4: MemoryKit - Persistent Memory for AI Coding Assistants -->
+        <div class="project-card" data-name="memorykit mcp server memory ai llm claude copilot cursor open source developer tools" data-tech="typescript nodejs mcp csharp dotnet npm">
+          <div class="project-header">
+            <span class="project-logo d-inline-flex align-items-center justify-content-center"><i class="fas fa-brain fa-2x" aria-hidden="true"></i></span>
+            <h2 class="project-title"><a href="https://github.com/rapozoantonio/memorykit" target="_blank" rel="noopener noreferrer">MemoryKit - Persistent Memory for AI Coding Assistants</a></h2>
+            <span class="team-badge"><i class="fas fa-user"></i> Solo project</span>
+            <div class="project-links">
+              <a href="https://github.com/rapozoantonio/memorykit" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://www.npmjs.com/package/memorykit-mcp-server" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> npm</a>
+            </div>
+          </div>
+          <div class="project-timeline">
+            <span><i class="far fa-calendar"></i> Started November 2025</span>
+            <span><i class="fas fa-check-circle"></i> v2.0.0 published September 2026</span>
+            <span><i class="fas fa-download"></i> ~73 weekly npm downloads · MIT license</span>
+          </div>
+
+          <div class="project-story">
+            <p><strong>The Problem (My Own):</strong></p>
+            <p class="project-description">
+              My AI coding assistant forgot everything between sessions. Every new conversation, it re-read the same files and asked the same questions about my codebase, and I paid for those tokens every time.
+            </p>
+
+            <p><strong>What I Built:</strong></p>
+            <p class="project-description">An MCP server that gives Claude Code, Claude Desktop, GitHub Copilot, and Cursor memory that lasts across sessions. Memories are plain Markdown files stored locally and kept separate per project. No database, Docker, or API keys needed.</p>
+          </div>
+          <ul class="project-highlights">
+            <li>Four memory layers with different lifetimes: working (session context, expires after 7 days), facts and procedures (permanent), and episodes (bugs and incidents, compacted after 30 days)</li>
+            <li>Classifies each question and loads only the layers it needs, so a quick check-in costs ~200 tokens and a deep recall up to ~1,500, never the whole store</li>
+            <li>Scores importance and rejects low-value and duplicate entries before they're saved; warns when new information contradicts what's already stored</li>
+            <li>Semantic search finds memories even when the question is worded differently</li>
+            <li>Cleans itself up automatically: removes stale entries, promotes important ones, and compacts old episodes</li>
+            <li>Every retrieval reports tokens spent learning something versus tokens spent recalling it</li>
+            <li>One-command setup with <code>npx memorykit-mcp-server init</code>, or install as a Claude Code plugin with <code>/recall</code> and <code>/save</code> commands</li>
+          </ul>
+
+          <div class="project-outcome">
+            <p><strong>Current Status:</strong> v2.0.0 on npm with ~73 weekly downloads. In one of my own sessions, a query that would have cost ~74k tokens to rediscover took ~4k with MemoryKit. The repo also includes a .NET API and client SDK.</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-badge tech-primary"><span class="language-dot lang-typescript"></span>TypeScript</span>
+            <span class="tech-badge tech-primary"><span class="language-dot lang-csharp"></span>C#</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">.NET</span>
+            <span class="tech-badge">Model Context Protocol (MCP)</span>
+            <span class="tech-badge">npm</span>
+          </div>
+          <div class="skills-demonstrated">
+            <div class="skills-label">Skills Demonstrated:</div>
+            <div class="tech-stack">
+              <span class="skill-badge">Problem Identification</span>
+              <span class="skill-badge">Developer Tools</span>
+              <span class="skill-badge">AI/LLM Integration</span>
+              <span class="skill-badge">Open Source Maintenance</span>
+              <span class="skill-badge">Product Launch</span>
+            </div>
+          </div>
+          <div class="project-status">
+            <span class="status-badge status-completed"><i class="fas fa-check-circle"></i> Open Source & Active</span>
+          </div>
+        </div>
       </div>
     </div>
 
