@@ -122,6 +122,11 @@
         margin-bottom: 8pt;
       }
 
+      @page {
+        size: letter;
+        margin: 0.5in;
+      }
+
       @media print {
         body {
           margin: 0;
@@ -131,8 +136,28 @@
         }
         main {
           max-width: 100%;
-          padding: 0.5in;
+          padding: 0;
           box-shadow: none;
+        }
+        h2,
+        h3,
+        h4,
+        .job-meta {
+          break-after: avoid;
+          page-break-after: avoid;
+        }
+        li,
+        p,
+        section > div,
+        .skill-category,
+        .education-item {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+        p,
+        li {
+          orphans: 3;
+          widows: 3;
         }
       }
     </style>
@@ -147,13 +172,11 @@
         </p>
 
         <div class="contact-info">
-          <span class="contact-item">✉ rapozoantonio@gmail.com</span>
-          <span class="contact-item">☎ +55 21 984 080 735</span>
-          <span class="contact-item">📍 Pittsburgh, PA, USA</span>
-          <span class="contact-item">⚙ https://github.com/rapozoantonio</span>
-          <span class="contact-item"
-            >✦ https://www.linkedin.com/in/rapozoantonio/</span
-          >
+          <p>rapozoantonio@gmail.com | +55 21 984 080 735 | New York, NY, USA</p>
+          <p>
+            https://github.com/rapozoantonio |
+            https://www.linkedin.com/in/rapozoantonio/
+          </p>
         </div>
       </section>
 
@@ -161,21 +184,53 @@
       <section>
         <h2>About</h2>
         <p>
-          Senior full-stack engineer with 8+ years building mission-critical
-          systems for government, transportation, and energy sectors. Spent the
-          last 4+ years engineering bridge inspection and asset management
-          platforms serving 15+ State DOTs, processing $500M+ in annual data
-          while meeting federal compliance (FHWA, NBIS). Technical stack:
-          Vue, React, Node, C#, .NET Core, Python. AWS 2X Certified. Integrated
-          AI/LLM capabilities (OpenAI, LangChain) into production systems.
-          Developed MemoryKit, open-source .NET library for
-          neuroscience-inspired memory architecture in LLM applications.
+          Senior full-stack engineer with 10+ years of experience in security,
+          government, transportation, and energy software. Currently at
+          Atakama, building AI security and data loss prevention (DLP) features
+          for a browser security platform. Previously spent nearly 4 years at
+          Mayvue building bridge inspection and asset management software used
+          by 15+ State DOTs, covering $500M+ in annual infrastructure spending
+          and built to federal standards (FHWA, NBIS, AASHTO). Stack: Vue,
+          React, Node, TypeScript, C#, .NET Core, Python. AWS Certified (2x).
+          Shipped OpenAI, LangChain, and Semantic Kernel integrations to
+          production. Author of MemoryKit, an open-source memory library and MCP
+          server for LLM apps.
         </p>
       </section>
 
       <!-- Experience Section -->
       <section>
         <h2>Professional Experience</h2>
+
+        <div>
+          <h3 class="job-title">Senior Software Engineer - Atakama</h3>
+          <p class="job-meta">
+            📅 November 2025 - Present | 📍 New York, NY, USA (Hybrid)
+          </p>
+          <ul>
+            <li>
+              Build data loss prevention (DLP) and AI governance features that
+              let security teams and MSPs see and control what data users share
+              with AI tools in the browser.
+            </li>
+            <li>
+              Ship customer-facing AI controls, including a guided setup flow for
+              creating AI usage policies. Stack: React.js, Node.js, TypeScript.
+            </li>
+            <li>
+              Designed the shared data table behind the product's security and
+              compliance dashboards; new dashboards are built on it by default.
+            </li>
+            <li>
+              Led a logging cleanup that reduced observability costs, and added
+              automated checks so unnecessary logging doesn't come back.
+            </li>
+            <li>
+              Build internal AI tools and automated quality checks used by the
+              rest of the engineering team.
+            </li>
+          </ul>
+        </div>
 
         <div>
           <h3 class="job-title">Software Engineer - Mayvue Solutions</h3>
@@ -249,6 +304,28 @@
         </div>
       </section>
 
+      <!-- Open Source Section -->
+      <section>
+        <h2>Open Source</h2>
+
+        <div>
+          <h3 class="job-title">MemoryKit - Creator &amp; Maintainer</h3>
+          <ul>
+            <li>
+              Open-source memory library for LLM apps, published as a .NET
+              library and as an MCP (Model Context Protocol) server on npm.
+              Works with Claude, GitHub Copilot, and Cursor.
+            </li>
+            <li>
+              Stores memory in separate layers (working, short-term, long-term)
+              and loads only what a query needs, within a token budget. Each
+              retrieval reports tokens saved; one benchmark query used ~4k
+              tokens instead of ~74k.
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <!-- Skills Section -->
       <section>
         <h2>Skills</h2>
@@ -282,8 +359,19 @@
           <h4>Data & AI</h4>
           <ul class="skill-list">
             <li>
-              SQL Server, PostgreSQL, MongoDB, DynamoDB | OpenAI, LangChain,
+              SQL Server, PostgreSQL, Oracle, MongoDB, DynamoDB, Firestore |
+              OpenAI, LangChain, Semantic Kernel, MCP (Model Context Protocol),
               Vector Databases, RAG
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h4>Security</h4>
+          <ul class="skill-list">
+            <li>
+              AI Security, Data Loss Prevention (DLP), AI Governance, Browser
+              Security
             </li>
           </ul>
         </div>
@@ -293,7 +381,8 @@
           <ul class="skill-list">
             <li>
               Domain-Driven Design, TDD, Clean Architecture, Agile, Git |
-              FHWA/NBIS Compliance, Offline-First Architecture
+              FHWA/NBIS Compliance, Offline-First Architecture, Observability
+              &amp; Logging
             </li>
           </ul>
         </div>
